@@ -1,0 +1,25 @@
+1758880264.368 WRITE {"status": "initializing", "processing": false, "timestamp": 1758880264.366632}
+1758880264.368 WRITE {"status": "ready", "processing": false, "timestamp": 1758880264.3682072}
+1758880306.244 WRITE {"status": "processing", "processing": true, "timestamp": 1758880306.242142}
+1758880314.748 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Planner requires clarification to proceed", "processing": false, "timestamp": 1758880314.7466059}
+1758880314.748 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Awaiting user clarification to proceed", "processing": false, "timestamp": 1758880314.7478964}
+1758880319.363 WRITE {"status": "processing", "processing": true, "timestamp": 1758880319.3627825}
+1758880323.026 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Planner requires clarification to proceed", "processing": false, "timestamp": 1758880323.0255237}
+1758880323.042 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Awaiting user clarification to proceed", "processing": false, "timestamp": 1758880323.0258877}
+1758880335.750 WRITE {"status": "processing", "processing": true, "timestamp": 1758880335.7495215}
+1758880339.532 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Planner requires clarification to proceed", "processing": false, "timestamp": 1758880339.5316365}
+1758880339.533 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Awaiting user clarification to proceed", "processing": false, "timestamp": 1758880339.5322177}
+1758880342.532 WRITE {"status": "shutdown", "processing": false, "timestamp": 1758880342.5321605}
+1758880789.376 WRITE {"status": "initializing", "processing": false, "timestamp": 1758880789.37549}
+1758880789.377 WRITE {"status": "ready", "processing": false, "timestamp": 1758880789.376593}
+1758880801.738 WRITE {"status": "processing", "processing": true, "timestamp": 1758880801.7371144, "pending_command": "find a monster", "message": "Planning and executing mission..."}
+1758880814.495 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Provide clarification to proceed", "processing": false, "timestamp": 1758880814.4942784}
+1758880823.460 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Provide clarification to proceed", "processing": false, "timestamp": 1758880823.4591827}
+1758880835.844 WRITE {"status": "waiting_clarification", "pending_command": "find a monster", "message": "Provide clarification to proceed", "processing": false, "timestamp": 1758880835.843088}
+1758880843.918 WRITE {"status": "ready", "processing": false, "pending_command": null, "message": null, "timestamp": 1758880843.9171245}
+1758880879.853 WRITE {"status": "shutdown", "processing": false, "timestamp": 1758880879.8521879}
+1758887569.378 WRITE {"status": "initializing", "processing": false, "timestamp": 1758887569.3760607}
+1758887569.380 WRITE {"status": "ready", "processing": false, "timestamp": 1758887569.3796847}
+1758887702.740 WRITE {"status": "processing", "processing": true, "timestamp": 1758887702.7396908, "pending_command": "find the gate", "message": "Planning and executing mission..."}
+1758887712.270 WRITE {"status": "ready", "processing": false, "timestamp": 1758887712.2687156, "pending_command": null, "message": null}
+1758887749.327 WRITE {"status": "shutdown", "processing": false, "timestamp": 1758887749.3258905}
