@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- ============================================ -->
+    <!-- GAMMA_BT SYSTEM LAUNCHER (Full C++)          -->
+    <!-- Uses guidance_pkg launcher + adds beta_bt   -->
+    <!-- + C++ RViz visualization and perception     -->
+    <!-- ============================================ -->
+
+
+
+    <!-- Arguments -->
+    <arg name="experiment_place" default="RAMI"/>
+    <arg name="guidance_namespace" default="guidance"/>
+    <arg name="verbose" default="true"/>
+    <arg name="auto_send_mission" default="true"/>
+    
+    <!-- ✅ SIMULATION FLAG (RViz visualization) -->
+    <arg name="enable_rviz_simulation" default="true"/>
+    
+    <!-- ✅ SELECT MISSION -->
+    <arg name="selected_mission" default="survey_C"/>
+    
+    <!-- ✅ LOAD MISSION -->
+    <rosparam command="load" file="$(find mm_bt)/config/missions.yaml"/>
+    
+    <!-- ✅ LOAD MISSION -->
+    <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+
+    <!-- ✅ ROSBAG RECORDING -->
+    <arg name="enable_recording" default="false"/>
+    <arg name="bag_name" default="gamma_bt_recording"/>
+
+
+    <!-- ✅ Load mission objects YAML (buoys and obstacles) -->
+    <rosparam command="load" file="$(find mm_bt)/config/mission_objects.yaml"/>
+    
+    <!-- ✅ LEGGI PARAMETRI DAL GOAL SELEZIONATO -->
+    <arg name="mission_id" value="$(eval arg('selected_mission') + '/mission_id')"/>
+    <arg name="mission_tag" value="$(eval arg('selected_mission') + '/mission_tag')"/>
+    <arg name="latitude" value="$(eval arg('selected_mission') + '/latitude')"/>
+    <arg name="longitude" value="$(eval arg('selected_mission') + '/longitude')"/>
+    <arg name="depth" value="$(eval arg('selected_mission') + '/depth')"/>
+    <arg name="yaw" value="$(eval arg('selected_mission') + '/yaw')"/>
+    <arg name="radius" value="$(eval arg('selected_mission') + '/radius')"/>
+    <arg name="use_yaw" value="$(eval arg('selected_mission') + '/use_yaw')"/>
+    <arg name="use_spiral" value="$(eval arg('selected_mission') + '/use_spiral')"/>
+    
+    <!-- Behavior Tree XML file -->
+    <arg name="tree_file" default="/root/btree_ws/src/btree_mms/MMs/MissionBTrees/Tbm1MainTree.xml"/>
+
+
+
+    <!-- ============================================ -->
+    <!-- 1. ZENO Model (C++ Simulator)            -->
+    <!-- Responds to relative error               -->
+    <!-- ============================================ -->
+    <node
+          pkg="mm_bt" 
+          type="zeno_model" 
+          name="zeno_model" 
+          output="screen">
+        <!-- Load parameters from YAML file (includes rate and integration_step) -->
+        <rosparam command="load" file="$(find mm_bt)/config/zeno_params.yaml" />
+    </node>
+
+
+
+    <!-- ============================================ -->
+    <!-- 2. GUIDANCE STACK           -->
+    <!-- ============================================ -->
+    <group ns="raasl_stack">
+        <group ns="$(arg guidance_namespace)">
+            <!-- Carica parametri di configurazione -->
+            <rosparam command="load" file="$(find guidance_pkg)/config/$(arg experiment_place).yaml" />
+            <rosparam command="load" file="$(find guidance_pkg)/config/guidance_params.yaml" />
+            
+            <!-- Nodi del guidance stack -->
+            <node pkg="guidance_pkg" type="guidance_manager" name="guidance_manager" output="screen"/>
+            <node pkg="guidance_pkg" type="path_follower" name="path_follower" output="screen"/>
+            <!-- <node pkg="guidance_pkg" type="relative_guidance" name="relative_guidance" output="screen"/> -->
+        </group>
+    </group>
+
+
+
+
+    <!-- ============================================ -->
+    <!-- 3. GAMMA_BT (Behavior Tree Mission Manager)  -->
+    <!-- ============================================ -->
+    <node pkg="behaviortree_ros" type="gamma_bt" name="gamma_bt" output="screen" respawn="false">
+        <!-- Load rate from zeno_params.yaml (must be loaded globally or here) -->
+        <rosparam command="load" file="$(find mm_bt)/config/zeno_params.yaml" />
+        <param name="verbose" value="$(arg verbose)"/>
+        <param name="tree_file" value="$(arg tree_file)"/>
+    </node>
+
+
+
+    <!-- ============================================ -->
+    <!-- 4. MISSION LOG LISTENER (Python)             -->
+    <!-- Subscribes to /rosout, filters gamma_bt logs -->
+    <!-- Saves mission logs to YAML for RAG system    -->
+    <!-- ============================================ -->
+    <node pkg="mm_bt" 
+          type="logs_listener.py" 
+          name="mission_log_listener" 
+          output="log"
+          launch-prefix="bash -c 'sleep 5; $0 $@' ">
+        <!-- Wait 5 seconds for gamma_bt to initialize -->
+        <param name="log_file_path" value="$(find mm_bt)/logs/mission_logs.yaml"/>
+        <param name="verbose_logging" value="false"/>
+    </node>
+
+
+
+    <!-- ============================================ -->
+    <!-- 5. AUTO-ACTIVATION (script bash)            -->
+    <!-- ============================================ -->
+    <node pkg="mm_bt" type="activate_system.sh" name="activate_system" output="screen"/>
+
+
+
+    <!-- ============================================ -->
+    <!-- 6. ROS MISSION BRIDGE (Python HTTP Server)  -->
+    <!-- Receives mission requests from WSL 22       -->
+    <!-- Publishes to /gamma_bt/setInfo              -->
+    <!-- ============================================ -->
+    <node pkg="mm_bt" 
+          type="tlm2ros_bridge.py" 
+          name="ros_mission_bridge" 
+          output="screen"
+          launch-prefix="bash -c 'sleep 3; $0 $@' ">
+        <!-- Bridge configuration -->
+        <param name="host" value="0.0.0.0"/>
+        <param name="port" value="5001"/>
+        <param name="mission_topic" value="/gamma_bt/setInfo"/>
+        <param name="mission_memory_file" value="$(find mm_bt)/config/mission_memory.yaml"/>
+    </node>
+
+
+
+    <!-- ============================================ -->
+    <!-- 7. PERCEPTION NODE (C++ - percepisce oggetti) -->
+    <!-- Sostituisce perceive_world.py               -->
+    <!-- ============================================ -->
+    <node pkg="mm_bt" type="perceive_world" name="perceive_world" output="screen">
+        <param name="world_file_path" value="$(find mm_bt)/config/RAMI_area_1.world"/>
+        <param name="generate_world" value="true"/>
+        <param name="mission_memory_file" value="$(find mm_bt)/config/mission_memory.yaml"/>
+        
+        <!-- Detection parameters -->
+        <param name="detection_range" value="1.0"/>
+        <param name="detection_fov" value="60.0"/>
+        <param name="detection_timeout" value="1.5"/>
+        
+        <!-- Map parameters loaded from YAML -->
+        <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+    </node>
+
+
+
+    <!-- ============================================ -->
+    <!-- 8. RVIZ VISUALIZATION GROUP (C++)           -->
+    <!-- Visualizza Robot, Goal, Mappa e Buoys       -->
+    <!-- ============================================ -->
+    <group if="$(arg enable_rviz_simulation)">
+        
+        <!-- Mission Visualizer Node (C++ - sostituisce zeno_rviz_visualizer.py) -->
+        <node pkg="mm_bt" type="mission_visualizer" name="mission_visualizer" output="screen">
+            <param name="mission_memory_file" value="$(find mm_bt)/config/mission_memory.yaml"/>
+            <param name="max_path_length" value="1000"/>
+            <param name="min_distance_threshold" value="0.05"/>
+            
+            <!-- Map parameters loaded from YAML -->
+            <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+        </node>
+        
+        <!-- RViz with custom configuration -->
+        <node pkg="rviz" type="rviz" name="rviz" 
+              args="-d $(find mm_bt)/config/rviz/zeno_visualization.rviz"
+              output="screen"/>
+        
+        <!-- Static TF: map -> my_frame_id (handled internally by mission_visualizer) -->
+        <!-- No external static_transform_publisher needed -->
+        
+    </group>
+
+    <!-- ============================================ -->
+    <!-- 9. ROSBAG RECORDER                          -->
+    <!-- Records all topics when enabled             -->
+    <!-- ============================================ -->
+    <node if="$(arg enable_recording)"
+          pkg="rosbag"
+          type="record"
+          name="rosbag_recorder"
+          args="-a -O $(find mm_bt)/bags/$(arg bag_name)"
+          output="screen"/>
+
+
+
+</launch>
+
+
+
+

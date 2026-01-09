@@ -1,0 +1,636 @@
+# ============================================
+# MISSION GOALS CONFIGURATION
+# RAMI area 1
+# Robot start position: lat=44.09588219, lon=9.86493751 (center)
+# ============================================
+
+default_mission: "survey_C"
+
+# ============================================
+# GOAL_NW - Northwest Subarea Center
+# ============================================
+goal_NW:
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  # Tolleranza 2 metri
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal NW - Northwest subarea center"
+
+# ============================================
+# GOAL_NE - Northeast Subarea Center
+# ============================================
+goal_NE:
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09599673  # NE subarea center
+  longitude: 9.86498211  # NE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  # Tolleranza 2 metri
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal NE - Northeast subarea center"
+
+# ============================================
+# GOAL_SW - Southwest Subarea Center
+# ============================================
+goal_SW:
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  # Tolleranza 2 metri
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal SW - Southwest subarea center"
+
+# ============================================
+# GOAL_SE - Southeast Subarea Center
+# ============================================
+goal_SE:
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09581752  # SE subarea center
+  longitude: 9.86505862  # SE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  # Tolleranza 2 metri
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal SE - Southeast subarea center"
+
+# ============================================
+# SURVEY_NW - Northwest Subarea Survey
+# ============================================
+survey_NW:
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 14.1  # Copre tutta la sottoarea NW
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey NW - Complete northwest subarea survey"
+
+# ============================================
+# SURVEY_NE - Northeast Subarea Survey
+# ============================================
+survey_NE:
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09599673  # NE subarea center
+  longitude: 9.86498211  # NE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 14.0  # Copre tutta la sottoarea NE
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey NE - Complete northeast subarea survey"
+
+# ============================================
+# SURVEY_SW - Southwest Subarea Survey
+# ============================================
+survey_SW:
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 14.0  # Copre tutta la sottoarea SW
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey SW - Complete southwest subarea survey"
+
+# ============================================
+# SURVEY_SE - Southeast Subarea Survey
+# ============================================
+survey_SE:
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09581752  # SE subarea center
+  longitude: 9.86505862  # SE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 13.9  # Copre tutta la sottoarea SE
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey SE - Complete southeast subarea survey"
+
+# ============================================
+# SURVEY_BA - Buoy area survey
+# ============================================
+survey_ba:
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09581000
+  longitude: 9.86482000
+  depth: 0.0
+  yaw: 0.0
+  radius: 4.0
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey buoy area - Buoy area centered zone (white, black, red; minimal radius)"
+
+# ============================================
+# SURVEY_C - Center of the map
+# ============================================
+survey_C:
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09588219
+  longitude: 9.86493751
+  depth: 0.0
+  yaw: 0.0
+  radius: 5.0
+  use_yaw: false
+  use_spiral: false
+  color: ""
+  description: "Survey C - random central survey"
+
+# ============================================
+# PASSGATE - Yellow Gate Buoys gate cross
+# ============================================
+passgate:
+  mission_id: 0
+  mission_tag: 2
+  latitude: 44.09597089
+  longitude: 9.86491126
+  depth: 0.0
+  yaw: 0.0
+  radius: 5.0
+  use_yaw: false
+  use_spiral: true
+  color: "yellow"
+  description: "PassGate: reach the gate and cross it"
+
+# ============================================
+# FINDBUOY_RED - Find Red Buoy Mission
+# ============================================
+findbuoy_red:
+  mission_id: 0
+  mission_tag: 5
+  latitude: 44.09581000
+  longitude: 9.86482000  
+  depth: 0.0
+  yaw: 0.0
+  radius: 4.0
+  use_yaw: false
+  use_spiral: true
+  color: "red"
+  description: "FindBuoy RED - Search for red buoy in buoy area"
+
+# ============================================
+# FINDBUOY_BLACK - Find Black Buoy Mission
+# ============================================
+findbuoy_black:
+  mission_id: 0
+  mission_tag: 5
+  latitude: 44.09581000  
+  longitude: 9.86482000  
+  depth: 0.0
+  yaw: 0.0
+  radius: 4.0 
+  use_yaw: false
+  use_spiral: true
+  color: "black" 
+  description: "FindBuoy BLACK - Search for black buoy in buoy area"
+
+# ============================================
+# FINDBUOY_WHITE - Find White Buoy Mission
+# ============================================
+findbuoy_white:
+  mission_id: 0
+  mission_tag: 5
+  latitude: 44.09581000 
+  longitude: 9.86482000  
+  depth: 0.0
+  yaw: 0.0
+  radius: 4.0  
+  use_yaw: false
+  use_spiral: true
+  color: "white" 
+  description: "FindBuoy White - Search for black buoy in buoy area"
+
+# ============================================
+# MOVE_RED - Find and Execute Move on Red Buoy
+# ============================================
+move_red:
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09581000
+  longitude: 9.86482000 
+  depth: 0.0
+  yaw: 0.0
+  radius: 4.0
+  use_yaw: false
+  use_spiral: true
+  color: "red"
+  description: "Move RED - Find red buoy and execute cardinal move"
+
+# ============================================
+# MOVE_WHITE - Find and Execute Move on White Buoy
+# ============================================
+move_white:
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09581000  
+  longitude: 9.86482000 
+  depth: 0.0
+  yaw: 0.0
+  radius: 4.0  
+  use_yaw: false
+  use_spiral: true
+  color: "white"
+  description: "Move WHITE - Find white buoy and execute cardinal move"
+
+# ============================================
+# MOVE_BLACK - Find and Execute Move on Black Buoy
+# ============================================
+move_black:
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09581000
+  longitude: 9.86482000  
+  depth: 0.0
+  yaw: 0.0
+  radius: 4.0
+  use_yaw: false
+  use_spiral: true
+  color: "black"
+  description: "Move BLACK - Find black buoy and execute cardinal move"
+
+# ============================================
+# STOP MISSION - Terminates mission
+# ============================================
+stop_mission:
+  mission_id: 0
+  mission_tag: 4
+  latitude: 0.0
+  longitude: 0.0
+  depth: 0.0
+  yaw: 0.0
+  radius: 0.0
+  use_yaw: false
+  use_spiral: false
+  color: ""  # No color needed for stop
+  description: "Stop mission - Halts behavior tree and resets after 5s"
+
+
+############################################################################################
+############################################################################################
+############################################################################################
+
+# default_mission: "goal_A"
+
+# # ============================================
+# # GOAL A - Southeast Quadrant
+# # Distanza: ~14.5 metri dal punto di partenza
+# # ============================================
+# goal_A:
+#   mission_id: 0
+#   mission_tag: 1
+#   latitude: 44.09578000  # Southeast quadrant
+#   longitude: 9.86505000  # Verso il mare
+#   depth: 0.0
+#   yaw: 0.0  # Nord
+#   radius: 2.0  # Tolleranza 2 metri
+#   use_yaw: true
+#   use_spiral: false
+#   color: ""  # No color needed for waypoint missions
+#   description: "Goal A - Southeast position (14.5m from start)"
+
+# # ============================================
+# # GOAL B - Northwest Quadrant
+# # Distanza: ~19.9 metri dal punto di partenza
+# # ============================================
+# goal_B:
+#   mission_id: 0
+#   mission_tag: 1
+#   latitude: 44.09600000  # Northwest quadrant
+#   longitude: 9.86475000  # Verso terra
+#   depth: 0.0
+#   yaw: 1.5708  # Est (π/2 radianti)
+#   radius: 2.0  # Tolleranza 2 metri
+#   use_yaw: true
+#   use_spiral: false
+#   color: ""  # No color needed for waypoint missions
+#   description: "Goal B - Northwest position (19.9m from start)"
+
+# # ============================================
+# # SURVEY A - Con spirale
+# # Punto casuale nell'area RAMI 1 con pattern a spirale
+# # ============================================
+# survey_A:
+#   mission_id: 0
+#   mission_tag: 3
+#   latitude: 44.09590000  # Punto casuale nell'area
+#   longitude: 9.86485000  # All'interno dei bounds
+#   depth: 0.0  # Profondità survey
+#   yaw: 0.0  # Nord
+#   radius: 6.0  # Area survey casuale
+#   use_yaw: false
+#   use_spiral: true
+#   color: ""  # No specific color for generic survey
+#   description: "Survey A - Spiral pattern survey"
+
+# # ============================================
+# # SURVEY B - Senza spirale (transects)
+# # Punto casuale nell'area RAMI 1 con pattern a transetti
+# # ============================================
+# survey_B:
+#   mission_id: 0
+#   mission_tag: 3
+#   latitude: 44.09595000  # Punto casuale diverso nell'area
+#   longitude: 9.86495000  # All'interno dei bounds
+#   depth: 0.0  # Profondità survey
+#   yaw: 0.0  # Nord
+#   radius: 8.0  # Area survey casuale differente
+#   use_yaw: false
+#   use_spiral: false
+#   color: ""  # No specific color for generic survey
+#   description: "Survey B - Transect pattern survey"
+
+# # ============================================
+# # SURVEY_C - Yellow Gate Buoys Survey
+# # Area: Zona Nord (gate)
+# # Centro: punto medio tra le due boe gialle
+# # Raggio: 3 metri (copre entrambe le boe)
+# # ============================================
+# survey_C:
+#   mission_id: 0
+#   mission_tag: 3
+#   latitude: 44.09599633  # media tra gate_1 e gate_2 (stessa lat)
+#   longitude: 9.86491126  # (9.86489875 + 9.86492377)/2
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 3.0
+#   use_yaw: false
+#   use_spiral: true
+#   color: "yellow"  # Looking for yellow buoys
+#   description: "Survey C - Yellow gate buoys (centered, 3m radius)"
+
+# # ============================================
+# # SURVEY_D - SW Zone Survey (CENTERED)
+# # Area: Zona SW con boe centrate
+# # Centro: baricentro (media) di white/black/red
+# # Raggio: minimo che copre le 3 boe (≈4 m)
+# # ============================================
+# survey_D:
+#   mission_id: 0
+#   mission_tag: 3
+#   latitude: 44.09581000  # (44.09583 + 44.09580 + 44.09580)/3
+#   longitude: 9.86482000  # (9.864810 + 9.864790 + 9.864860)/3
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0  # raggio minimo che include la più distante delle tre con margine
+#   use_yaw: false
+#   use_spiral: true
+#   color: ""  # Multiple colors in this area
+#   description: "Survey D - SW centered zone (white, black, red; minimal radius)"
+
+# # ============================================
+# # SURVEY_E - Center of the map
+# # Area: Central area
+# # Centro: starting position
+# # Raggio: random
+# # ============================================
+# survey_E:
+#   mission_id: 0
+#   mission_tag: 3
+#   latitude: 44.09588219
+#   longitude: 9.86493751
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 5.0
+#   use_yaw: false
+#   use_spiral: false
+#   color: ""  # No specific color for generic survey
+#   description: "Survey E - random central survey"
+
+# # ============================================
+# # PASSGATE_A - Yellow Gate Buoys gate cross
+# # Area: Zona Nord (gate)
+# # Centro: punto medio tra le due boe gialle
+# # Raggio: 3 metri (copre entrambe le boe)
+# # ============================================
+# passgate_A:
+#   mission_id: 0
+#   mission_tag: 2
+#   latitude: 44.09599633
+#   longitude: 9.86491126
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 3.0
+#   use_yaw: false
+#   use_spiral: true
+#   color: "yellow"  # PassGate requires yellow buoys
+#   description: "PassGate_A: reach the gate and cross it"
+
+# # ============================================
+# # PASSGATE_B - Yellow Gate Buoys gate cross
+# # Area: Zona Nord (gate)
+# # Centro: 2 metri dalle boe
+# # Raggio: 5 metri (copre entrambe le boe)
+# # ============================================
+# passgate_B:
+#   mission_id: 0
+#   mission_tag: 2
+#   latitude: 44.09597089
+#   longitude: 9.86491126
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 5.0
+#   use_yaw: false
+#   use_spiral: true
+#   color: "yellow"  # PassGate requires yellow buoys
+#   description: "PassGate_B: reach the gate and cross it"
+
+# # ============================================
+# # PASSGATE_C - Yellow Gate Buoys gate cross
+# # Area: sbagliata
+# # Centro: boe colorate
+# # Raggio: copre tutte le boe colorate
+# # ============================================
+# passgate_C:
+#   mission_id: 0
+#   mission_tag: 2
+#   latitude: 44.09581000
+#   longitude: 9.86482000
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0
+#   use_yaw: false
+#   use_spiral: true
+#   color: "yellow"  # PassGate requires yellow buoys
+#   description: "PassGate_C: test color detection"
+
+# # ============================================
+# # FINDBUOY_RED - Find Red Buoy Mission (NEW)
+# # Mission tag: 5
+# # Area: Zona SW (red buoy location)
+# # Uses survey_D coordinates
+# # ============================================
+# findbuoy_red:
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09581000  # Survey D center (SW zone)
+#   longitude: 9.86482000  # Survey D center (SW zone)
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0  # Same as survey_D
+#   use_yaw: false
+#   use_spiral: true
+#   color: "red"  # Target: red buoy
+#   description: "FindBuoy RED - Search for red buoy in SW zone"
+
+# # ============================================
+# # FINDBUOY_BLACK - Find Black Buoy Mission (NEW)
+# # Mission tag: 5
+# # Area: Zona SW (red buoy location)
+# # Uses survey_D coordinates
+# # ============================================
+# findbuoy_black:
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09581000  # Survey D center (SW zone)
+#   longitude: 9.86482000  # Survey D center (SW zone)
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0  # Same as survey_D
+#   use_yaw: false
+#   use_spiral: true
+#   color: "black" 
+#   description: "FindBuoy BLACK - Search for black buoy in SW zone"
+
+# # ============================================
+# # FINDBUOY_WHITE - Find White Buoy Mission (NEW)
+# # Mission tag: 5
+# # Area: Zona SW (red buoy location)
+# # Uses survey_D coordinates
+# # ============================================
+# findbuoy_white:
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09581000  # Survey D center (SW zone)
+#   longitude: 9.86482000  # Survey D center (SW zone)
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0  # Same as survey_D
+#   use_yaw: false
+#   use_spiral: true
+#   color: "white" 
+#   description: "FindBuoy White - Search for black buoy in SW zone"
+
+# # ============================================
+# # MOVE_RED - Find and Execute Move on Red Buoy (NEW)
+# # Mission tag: 6
+# # Area: Zona SW (red buoy location)
+# # Uses survey_D coordinates
+# # Will either:
+# # - Search for red buoy if not in memory, then execute move1
+# # - Go to known position if already in memory, then execute move1
+# # ============================================
+# move_red:
+#   mission_id: 0
+#   mission_tag: 6
+#   latitude: 44.09581000  # Survey D center (SW zone)
+#   longitude: 9.86482000  # Survey D center (SW zone)
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0  # Same as survey_D
+#   use_yaw: false
+#   use_spiral: true
+#   color: "red"  # Target: red buoy
+#   description: "Move RED - Find red buoy and execute cardinal move (move1)"
+
+# # ============================================
+# # FINDBUOY_YELLOW - Find Yellow Buoy Mission (NEW)
+# # Mission tag: 5
+# # Area: Zona Nord (yellow gate buoys)
+# # Uses survey_C coordinates
+# # ============================================
+# findbuoy_yellow:
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09599633  # Survey C center (gate zone)
+#   longitude: 9.86491126  # Survey C center (gate zone)
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 3.0  # Same as survey_C
+#   use_yaw: false
+#   use_spiral: true
+#   color: "yellow"  # Target: yellow buoy
+#   description: "FindBuoy YELLOW - Search for yellow buoy in gate zone"
+
+# # ============================================
+# # MOVE_WHITE - Find and Execute Move on White Buoy (NEW)
+# # Mission tag: 6
+# # Area: Zona SW (white buoy location)
+# # ============================================
+# move_white:
+#   mission_id: 0
+#   mission_tag: 6
+#   latitude: 44.09581000  # Survey D center (SW zone)
+#   longitude: 9.86482000  # Survey D center (SW zone)
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0  # Same as survey_D
+#   use_yaw: false
+#   use_spiral: true
+#   color: "white"  # Target: white buoy
+#   description: "Move WHITE - Find white buoy and execute cardinal move (move1)"
+
+# # ============================================
+# # MOVE_BLACK - Find and Execute Move on Black Buoy (NEW)
+# # Mission tag: 6
+# # Area: Zona SW (black buoy location)
+# # ============================================
+# move_black:
+#   mission_id: 0
+#   mission_tag: 6
+#   latitude: 44.09581000  # Survey D center (SW zone)
+#   longitude: 9.86482000  # Survey D center (SW zone)
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 4.0  # Same as survey_D
+#   use_yaw: false
+#   use_spiral: true
+#   color: "black"  # Target: black buoy
+#   description: "Move BLACK - Find black buoy and execute cardinal move (move1)"
+
+# # ============================================
+# # STOP MISSION - Ferma il behavior tree
+# # ============================================
+# stop_mission:
+#   mission_id: 0
+#   mission_tag: 4
+#   latitude: 0.0
+#   longitude: 0.0
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: 0.0
+#   use_yaw: false
+#   use_spiral: false
+#   color: ""  # No color needed for stop
+#   description: "Stop mission - Halts behavior tree and resets after 5s"
+
+

@@ -1,0 +1,78 @@
+# Mission Objects Configuration
+# Buoy positions in GPS coordinates (LatLonDepth)
+# All buoys positioned INSIDE RAMI Area 1 boundaries
+# WITH 4 METER SAFETY MARGINS from all boundaries
+#
+# Area: ~51m (N-S) x ~23m (E-W)
+# Origin: (44.09613065, 9.86506808)
+#
+# LAYOUT:
+#   - Yellow gate buoys: North area (75% Nord)
+#   - White, Black, Red: Centered in SW zone (minimum 4m from borders)
+
+mission_objects:
+  buoys:
+    # ==========================================
+    # GATE BUOYS (2 yellow buoys, 2m apart)
+    # Located at 75% North in the area
+    # ==========================================
+    yellow_gate_1:
+      latitude: 44.09599633      # North: 38.35m from SW corner
+      longitude: 9.86489875      # East: 10.46m from SW corner
+      depth: 0.0
+      color: "yellow"
+      label: "boa_yellow_1"
+      fiducial_id: 1
+      
+    yellow_gate_2:
+      latitude: 44.09599633      # North: 38.35m from SW corner
+      longitude: 9.86492377      # East: 12.46m from SW corner (2m from gate_1)
+      depth: 0.0
+      color: "yellow"
+      label: "boa_yellow_2"
+      fiducial_id: 2
+    
+    # ==========================================
+    # ADDITIONAL BUOYS - CENTERED SW ZONE
+    # Positioned with 4m minimum margin from ALL boundaries
+    # ==========================================
+    white_buoy:
+      latitude: 44.09583000      # Spostata verso il centro, ~6 m N-E rispetto alla stima precedente
+      longitude: 9.86481000      # Rimane nel SW con margini >4 m
+      depth: 0.0
+      color: "white"
+      label: "boa_white_1"
+      fiducial_id: 3
+      
+    black_buoy:
+      latitude: 44.09580000      # Più interna e a O della rossa, sotto la bianca
+      longitude: 9.86479000      # Sicura dal bordo Ovest
+      depth: 0.0
+      color: "black"
+      label: "boa_black_1"
+      fiducial_id: 4
+      
+    red_buoy:
+      latitude: 44.09580000      # Allineata in lat con la nera, più a Est
+      longitude: 9.86486000      # Più vicina al centro, margine >4 m
+      depth: 0.0
+      color: "red"
+      label: "boa_red_1"
+      fiducial_id: 5
+
+# Buoy move mappings
+buoy_moves:
+  yellow: "move1"
+  red: "move1"
+  white: "move1"
+  black: "move1"
+
+# Detection parameters
+detection_params:
+  range: 2.0        # Detection range in meters
+  fov: 120.0        # Field of view in degrees
+  timeout: 1.0      # Detection timeout in seconds
+
+
+
+

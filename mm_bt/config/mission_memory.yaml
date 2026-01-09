@@ -1,0 +1,2 @@
+discovered_buoys: [{discovery_time: 1764259945.483162, longitude: 9.86489875, color: yellow, latitude: 44.09599633, fiducial_id: 1, name: yellow_gate_1, label: boa_yellow_1, depth: 0}, {label: boa_yellow_2, name: yellow_gate_2, latitude: 44.09599633, discovery_time: 1764260066.554084, color: yellow, fiducial_id: 2, longitude: 9.864923770000001, depth: 0}]
+mission_start_time: 1764259625.183049

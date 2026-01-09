@@ -1,0 +1,447 @@
+# ============================================
+# MISSION GOALS CONFIGURATION
+# RAMI area 1
+# Robot start position: lat=44.09588219, lon=9.86493751 (center)
+# ============================================
+
+default_mission: "central survey"
+
+quadrant_radius : &val_qr 8.0
+
+#===================================================== G O A L S ========================================================
+
+# ============================================
+# GOAL_NW - Northwest Subarea Center
+# ============================================
+"go to NW goal":
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  # Tolleranza 2 metri
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal NW - Northwest subarea center"
+
+# ============================================
+# GOAL_NE - Northeast Subarea Center
+# ============================================
+"go to NE goal":
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09599673  # NE subarea center
+  longitude: 9.86498211  # NE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal NE - Northeast subarea center"
+
+# ============================================
+# GOAL_SW - Southwest Subarea Center
+# ============================================
+"go to SW goal":
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  # Tolleranza 2 metri
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal SW - Southwest subarea center"
+
+# ============================================
+# GOAL_SE - Southeast Subarea Center
+# ============================================
+"go to SE goal":
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09581752  # SE subarea center
+  longitude: 9.86505862  # SE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  # Tolleranza 2 metri
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal SE - Southeast subarea center"
+
+#===================================================== S U R V E Y S ========================================================
+
+# ============================================
+# SURVEY_NW - Northwest Subarea Survey
+# ============================================
+"NW quadrant survey":
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 14.1  # Copre tutta la sottoarea NW
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey NW - Complete northwest subarea survey"
+
+# ============================================
+# SURVEY_NE - Northeast Subarea Survey
+# ============================================
+"NE quadrant survey":
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09599673  # NE subarea center
+  longitude: 9.86498211  # NE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 14.0  # Copre tutta la sottoarea NE
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey NE - Complete northeast subarea survey"
+
+# ============================================
+# SURVEY_SW - Southwest Subarea Survey
+# ============================================
+"SW quadrant survey":
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 14.0  # Copre tutta la sottoarea SW
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey SW - Complete southwest subarea survey"
+
+# ============================================
+# SURVEY_SE - Southeast Subarea Survey
+# ============================================
+"SE quadrant survey":
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09581752  # SE subarea center
+  longitude: 9.86505862  # SE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 13.9  # Copre tutta la sottoarea SE
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Survey SE - Complete southeast subarea survey"
+
+# ============================================
+# SURVEY_C - Center of the map
+# ============================================
+"central survey":
+  mission_id: 0
+  mission_tag: 3
+  latitude: 44.09588219
+  longitude: 9.86493751
+  depth: 0.0
+  yaw: 0.0
+  radius: 10.0
+  use_yaw: false
+  use_spiral: false
+  color: ""
+  description: "Survey C - random central survey"
+
+#===================================================== R A M I ========================================================
+
+# ============================================
+# GOAL_R - Received goal (Northeast Subarea Center)
+# ============================================
+"go to received goal":
+  mission_id: 0
+  mission_tag: 1
+  latitude: 44.09599673  # NE subarea center
+  longitude: 9.86498211  # NE subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2.0  
+  use_yaw: true
+  use_spiral: false
+  color: ""
+  description: "Goal received in RAMI mission"
+
+
+# ============================================
+# PASS_GATE - Yellow Gate Buoys gate cross
+# ============================================
+"cross gate":
+  mission_id: 0
+  mission_tag: 2
+  latitude: 44.09597089
+  longitude: 9.86491126
+  depth: 0.0
+  yaw: 0.0
+  radius: 5.0
+  use_yaw: false
+  use_spiral: true
+  color: "yellow"
+  description: "Pass Gate: reach the gate and cross it"
+
+# ============================================
+# MAP BUOY AREA A - NW area (WRONG)
+# ============================================
+"map buoy area A":
+  mission_id: 0
+  mission_tag: 7
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: 2 # *val_qr
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Map the buoy area A"
+
+# ============================================
+# MAP BUOY AREA B - SW area (CORRECT)
+# ============================================
+"map buoy area B":
+  mission_id: 0
+  mission_tag: 7
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: *val_qr
+  use_yaw: false
+  use_spiral: true
+  color: ""
+  description: "Map the buoy area B"
+
+# ============================================
+# MOVE_RED_A - Find and Execute Move on Red Buoy, NW area (WRONG)
+# ============================================
+"make move red A":
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: *val_qr
+  use_yaw: false
+  use_spiral: true
+  color: "red"
+  description: "Move RED A - Find red buoy and execute cardinal move"
+
+# ============================================
+# MOVE_WHITE_A - Find and Execute Move on White Buoy, NW area (WRONG)
+# ============================================
+"make move white A":
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: *val_qr
+  use_yaw: false
+  use_spiral: true
+  color: "white"
+  description: "Move WHITE A - Find white buoy and execute cardinal move"
+
+# ============================================
+# MOVE_BLACK_A - Find and Execute Move on Black Buoy, NW area (WRONG)
+# ============================================
+"make move black A":
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09594791  # NW subarea center
+  longitude: 9.86475898  # NW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: *val_qr # TO CHANGE!
+  use_yaw: false
+  use_spiral: true
+  color: "black"
+  description: "Move BLACK A - Find black buoy and execute cardinal move"
+
+# ============================================
+# MOVE_RED_B - Find and Execute Move on Red Buoy, SW area (CORRECT)
+# ============================================
+"make move red B":
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: *val_qr
+  use_yaw: false
+  use_spiral: true
+  color: "red"
+  description: "Move RED B - Find red buoy and execute cardinal move"
+
+# ============================================
+# MOVE_WHITE_B - Find and Execute Move on White Buoy, SW area (CORRECT)
+# ============================================
+"make move white B":
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: *val_qr
+  use_yaw: false
+  use_spiral: true
+  color: "white"
+  description: "Move WHITE B - Find white buoy and execute cardinal move"
+
+# ============================================
+# MOVE_BLACK_B - Find and Execute Move on Black Buoy, SW area (CORRECT)
+# ============================================
+"make move black B":
+  mission_id: 0
+  mission_tag: 6
+  latitude: 44.09576708  # SW subarea center
+  longitude: 9.86483878  # SW subarea center
+  depth: 0.0
+  yaw: 0.0
+  radius: *val_qr
+  use_yaw: false
+  use_spiral: true
+  color: "black"
+  description: "Move BLACK B - Find black buoy and execute cardinal move"
+
+#===================================================== S T O P ========================================================
+
+# ============================================
+# STOP MISSION - Terminates mission
+# ============================================
+"stop mission":
+  mission_id: 0
+  mission_tag: 4
+  latitude: 0.0
+  longitude: 0.0
+  depth: 0.0
+  yaw: 0.0
+  radius: 0.0
+  use_yaw: false
+  use_spiral: false
+  color: ""  # No color needed for stop
+  description: "Stop mission - Halts behavior tree and resets after 5s"
+
+# ============================================
+# MISSION ALIASES - Shortcuts that expand to mission lists
+# ============================================
+mission_aliases:
+  'make move A':
+    - 'make move black A'
+    - 'make move red A'
+    - 'make move white A'
+  'make move B':
+    - 'make move black B'
+    - 'make move red B'
+    - 'make move white B'
+
+# # ============================================
+# # FIND_RED_A - Find Red Buoy, NW area (WRONG)
+# # ============================================
+# "find red buoy A":
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09594791  # NW subarea center
+#   longitude: 9.86475898  # NW subarea center
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: *val_qr
+#   use_yaw: false
+#   use_spiral: true
+#   color: "red"
+#   description: "Find RED A - Find red buoy"
+
+# # ============================================
+# # FIND_WHITE_A - Find White Buoy, NW area (WRONG)
+# # ============================================
+# "find white buoy A":
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09594791  # NW subarea center
+#   longitude: 9.86475898  # NW subarea center
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: *val_qr
+#   use_yaw: false
+#   use_spiral: true
+#   color: "white"
+#   description: "Find WHITE A - Find white buoy"
+
+# # ============================================
+# # FIND_BLACK_A - Find Black Buoy, NW area (WRONG)
+# # ============================================
+# "find black buoy A":
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09594791  # NW subarea center
+#   longitude: 9.86475898  # NW subarea center
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: *val_qr # 2 # *val_qr TO CHANGE!
+#   use_yaw: false
+#   use_spiral: true
+#   color: "black"
+#   description: "Find BLACK A - Find black buoy"
+
+# # ============================================
+# # FIND_RED_B - Find Red Buoy, SW area (CORRECT)
+# # ============================================
+# "find red buoy B":
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09576708  # SW subarea center
+#   longitude: 9.86483878  # SW subarea center
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: *val_qr
+#   use_yaw: false
+#   use_spiral: true
+#   color: "red"
+#   description: "Find RED B - Find red buoy"
+
+# # ============================================
+# # FIND_WHITE_B - Find White Buoy, SW area (CORRECT)
+# # ============================================
+# "find white buoy B":
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09576708  # SW subarea center
+#   longitude: 9.86483878  # SW subarea center
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: *val_qr
+#   use_yaw: false
+#   use_spiral: true
+#   color: "white"
+#   description: "Find WHITE B - Find white buoy"
+
+# # ============================================
+# # FIND_BLACK_B - Find Black Buoy, SW area (CORRECT)
+# # ============================================
+# "find black buoy B":
+#   mission_id: 0
+#   mission_tag: 5
+#   latitude: 44.09576708  # SW subarea center
+#   longitude: 9.86483878  # SW subarea center
+#   depth: 0.0
+#   yaw: 0.0
+#   radius: *val_qr
+#   use_yaw: false
+#   use_spiral: true
+#   color: "black"
+#   description: "Find BLACK B - Find black buoy"

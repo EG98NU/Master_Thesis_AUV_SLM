@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mm_bt</name>
+  <version>0.0.1</version>
+  <description>Mission Manager with Behavior Trees - Full C++ Implementation</description>
+
+  <maintainer email="user@todo.todo">user</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- C++ dependencies -->
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>nav_msgs</depend>
+  
+  <!-- TF dependencies (needed for quaternion conversions) -->
+  <depend>tf</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  
+  <!-- Custom message dependencies -->
+  <depend>marta_msgs</depend>
+  <depend>rami_msgs</depend>
+  <depend>joystick_command</depend>
+  
+  <!-- Behavior tree dependency -->
+  <depend>behaviortree_ros</depend>
+
+  <!-- RAASL Toolbox for coordinate conversions -->
+  <depend>raasl_toolbox</depend>
+
+  <!-- System dependencies -->
+  <depend>boost</depend>
+  <depend>eigen</depend>
+  
+  <!-- yaml-cpp for YAML file I/O -->
+  <build_depend>yaml-cpp</build_depend>
+  <exec_depend>yaml-cpp</exec_depend>
+
+  <!-- Python dependencies for bridge node -->
+  <exec_depend>python-flask</exec_depend>
+  <exec_depend>python-requests</exec_depend>
+
+  <export>
+  </export>
+</package>
+
+
+
+
+
+
+
+
+

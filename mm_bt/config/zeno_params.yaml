@@ -1,0 +1,98 @@
+# ============================================================================
+# Zeno Model Configuration
+# ============================================================================
+# This file contains all parameters for the Zeno
+# simulator using RAASL geodetic conversion libraries
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# NED Reference Frame Origin
+# ----------------------------------------------------------------------------
+# Define the NED (North-East-Down) coordinate system origin
+# These coordinates should match your operational area
+ned_origin_latitude: 44.09613064612619      # [deg] Reference latitude
+ned_origin_longitude: 9.865068083462063     # [deg] Reference longitude
+ned_origin_depth: 0.0                       # [m] Reference depth (typically 0)
+
+# ----------------------------------------------------------------------------
+# Initial Vehicle State
+# ----------------------------------------------------------------------------
+# Starting position and orientation of the simulated vehicle
+start_latitude: 44.09588219                 # [deg] Initial latitude
+start_longitude: 9.86493751                 # [deg] Initial longitude
+start_depth: 0.0                            # [m] Initial depth (0 = surface)
+start_yaw: 0.0                              # [rad] Initial heading (0 = North)
+
+# ----------------------------------------------------------------------------
+# Simulation Parameters
+# ----------------------------------------------------------------------------
+integration_step: 0.1                       # [s] Physics update time step
+rate: 10.0                                  # [Hz] NavStatus publishing rate
+
+# ----------------------------------------------------------------------------
+# Vehicle Physical Parameters
+# ----------------------------------------------------------------------------
+# Mass and damping characteristics of the Zeno AUV
+mass: 44.0                                  # [kg] Vehicle mass
+linear_damping: 1.0                         # [N*s/m] Surge (forward) damping
+lateral_damping: 5.0                        # [N*s/m] Sway (lateral) damping
+inertia: 6.4                                # [kg*m^2] Yaw moment of inertia
+yaw_damping: 1.0                            # [N*m*s/rad] Yaw damping coefficient
+
+# ----------------------------------------------------------------------------
+# Control Gains
+# ----------------------------------------------------------------------------
+# PD controller gains for vehicle motion control
+K_yaw_P: 30.0                               # Yaw proportional gain
+K_yaw_D: 30.0                               # Yaw derivative gain
+K_surge_P: 500.0                            # Surge velocity proportional gain
+K_sway_P: 500.0                             # Sway velocity proportional gain
+K_depth_P: 0.5                              # Depth proportional gain
+
+# # ----------------------------------------------------------------------------
+# # Control Gains
+# # ----------------------------------------------------------------------------
+# # PD controller gains for vehicle motion control
+# K_yaw_P: 30.0                               # Yaw proportional gain
+# K_yaw_D: 30.0                               # Yaw derivative gain
+# K_surge_P: 200.0                            # Surge velocity proportional gain
+# K_sway_P: 100.0                             # Sway velocity proportional gain
+# K_depth_P: 0.5                              # Depth proportional gain
+
+# Buoy move parameters
+move_distance_meters: 2.0  # Distance in meters for cardinal point moves
+
+##############################################################################################################
+
+# # ============================================================================
+# # Zeno Joystick Simulation Node Parameters
+# # ============================================================================
+# # This file contains parameters for the simulated AUV controlled by joystick
+# # commands. The node reads from /drivers/joystick and publishes NavStatus.
+
+# # ----------------------------------------------------------------------------
+# # Initial Vehicle State
+# # ----------------------------------------------------------------------------
+# # Starting position and orientation of the simulated vehicle
+# start_latitude: 44.09588219                 # [deg] Initial latitude
+# start_longitude: 9.86493751                 # [deg] Initial longitude
+# start_depth: 0.0                            # [m] Initial depth (0 = surface)
+# start_yaw: 0.0                              # [rad] Initial heading (0 = North)
+
+# # ----------------------------------------------------------------------------
+# # Vehicle Control Parameters
+# # ----------------------------------------------------------------------------
+# # These values correspond to multiplier = 4 from joystick_params.yaml
+# # The joystick axes range from -1.0 to 1.0, these are the maximum velocities
+
+# surge_speed_multiplier: 0.75                # [m/s] Max forward/backward speed
+# sway_speed_multiplier: 0.75                 # [m/s] Max lateral speed
+# yaw_rate: 0.5236                            # [rad/s] Yaw rate (30 deg/s)
+# depth_rate: 0.375                           # [m/s] Depth change rate
+# pitch_rate: 0.2618                          # [rad/s] Pitch rate (15 deg/s)
+
+# # ----------------------------------------------------------------------------
+# # Node Settings
+# # ----------------------------------------------------------------------------
+# update_rate: 50.0                           # [Hz] Node update frequency
+# verbose: true  

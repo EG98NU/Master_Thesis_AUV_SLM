@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- ============================================ -->
+    <!-- BETA_BT SYSTEM LAUNCHER (Full C++)          -->
+    <!-- Uses guidance_pkg launcher + adds beta_bt   -->
+    <!-- + C++ RViz visualization and perception     -->
+    <!-- ============================================ -->
+
+    <!-- Arguments -->
+    <arg name="experiment_place" default="RAMI"/>
+    <arg name="guidance_namespace" default="guidance"/>
+    <arg name="verbose" default="true"/>
+    <arg name="rate" default="10.0"/>
+    <arg name="auto_send_mission" default="true"/>
+    <arg name="visualization_on" default="false"/>
+    <arg name="joystick_command_on" default="true"/>
+    
+    <!-- ✅ SIMULATION FLAG (RViz visualization) -->
+    <arg name="enable_rviz_simulation" default="true"/>
+    
+    <!-- ✅ SIMULATION MODE: "joystick" or "dynamic" -->
+    <arg name="simulation_mode" default="joystick"/>
+    
+    <!-- ✅ SELEZIONA LA MISSIONE -->
+    <arg name="selected_mission" default="survey_D"/>
+    
+    <!-- ✅ CARICA YAML CON I GOAL -->
+    <rosparam command="load" file="$(find mm_bt)/config/missions.yaml"/>
+    
+    <!-- ✅ CARICA PARAMETRI MAPPA RAMI AREA 1 -->
+    <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+
+    <!-- ✅ Load mission objects YAML (buoys and obstacles) -->
+    <rosparam command="load" file="$(find mm_bt)/config/mission_objects.yaml"/>
+    
+    <!-- ✅ LEGGI PARAMETRI DAL GOAL SELEZIONATO -->
+    <arg name="mission_id" value="$(eval arg('selected_mission') + '/mission_id')"/>
+    <arg name="mission_tag" value="$(eval arg('selected_mission') + '/mission_tag')"/>
+    <arg name="latitude" value="$(eval arg('selected_mission') + '/latitude')"/>
+    <arg name="longitude" value="$(eval arg('selected_mission') + '/longitude')"/>
+    <arg name="depth" value="$(eval arg('selected_mission') + '/depth')"/>
+    <arg name="yaw" value="$(eval arg('selected_mission') + '/yaw')"/>
+    <arg name="radius" value="$(eval arg('selected_mission') + '/radius')"/>
+    <arg name="use_yaw" value="$(eval arg('selected_mission') + '/use_yaw')"/>
+    <arg name="use_spiral" value="$(eval arg('selected_mission') + '/use_spiral')"/>
+    
+    <!-- Behavior Tree XML file -->
+    <arg name="tree_file" default="/root/btree_ws/src/btree_mms/MMs/MissionBTrees/Tbm1MainTree.xml"/>
+
+    <!-- ============================================ -->
+    <!-- 1. ZENO JOYSTICK (C++ Simulator)            -->
+    <!-- Responds to joystick commands               -->
+    <!-- ============================================ -->
+    <node if="$(eval arg('simulation_mode') == 'joystick')" 
+          pkg="mm_bt" 
+          type="zeno_joystick" 
+          name="zeno_joystick" 
+          output="screen">
+        <!-- Load parameters from YAML file -->
+        <rosparam command="load" file="$(find mm_bt)/config/zeno_joystick_params.yaml" />
+        
+        <!-- Override with launch arguments if needed -->
+        <param name="rate" value="$(arg rate)"/>
+        <param name="integration_step" value="$(eval 1.0/arg('rate'))"/>
+    </node>
+
+    <!-- ============================================ -->
+    <!-- 2. GUIDANCE STACK (usa il launcher esistente) -->
+    <!-- ============================================ -->
+    <include file="$(find guidance_pkg)/launch/guidance.launch">
+        <arg name="guidance_namespace" value="$(arg guidance_namespace)"/>
+        <arg name="experiment_place" value="$(arg experiment_place)"/>
+        <arg name="visualization_on" value="$(arg visualization_on)"/>
+        <arg name="joystick_command_on" value="$(arg joystick_command_on)"/>
+    </include>
+
+    <!-- ============================================ -->
+    <!-- 3. BETA_BT (Behavior Tree Mission Manager)  -->
+    <!-- ============================================ -->
+    <node pkg="behaviortree_ros" type="beta_bt" name="beta_bt" output="screen" respawn="false">
+        <param name="rate" value="$(arg rate)"/>
+        <param name="verbose" value="$(arg verbose)"/>
+        <param name="tree_file" value="$(arg tree_file)"/>
+    </node>
+
+    <!-- ============================================ -->
+    <!-- 4. AUTO-ACTIVATION (script bash)            -->
+    <!-- ============================================ -->
+    <node pkg="mm_bt" type="activate_system.sh" name="activate_system" output="screen"/>
+
+    <!-- ============================================ -->
+    <!-- 5. SEND MISSION (script bash con parametri) -->
+    <!-- ============================================ -->
+    <node if="$(arg auto_send_mission)" 
+          pkg="mm_bt" 
+          type="send_mission.sh" 
+          name="send_mission" 
+          args="$(arg selected_mission)" 
+          output="screen"
+          launch-prefix="bash -c 'sleep 5; $0 $@' "/>
+
+    <!-- ============================================ -->
+    <!-- 6. PERCEPTION NODE (C++ - percepisce oggetti) -->
+    <!-- Sostituisce perceive_world.py               -->
+    <!-- ============================================ -->
+    <node pkg="mm_bt" type="perceive_world" name="perceive_world" output="screen">
+        <param name="world_file_path" value="$(find mm_bt)/config/RAMI_area_1.world"/>
+        <param name="generate_world" value="true"/>
+        <param name="mission_memory_file" value="$(find mm_bt)/config/mission_memory.yaml"/>
+        
+        <!-- Detection parameters -->
+        <param name="detection_range" value="1.0"/>
+        <param name="detection_fov" value="60.0"/>
+        <param name="detection_timeout" value="1.5"/>
+        
+        <!-- Map parameters loaded from YAML -->
+        <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+    </node>
+
+    <!-- ============================================ -->
+    <!-- 7. RVIZ VISUALIZATION GROUP (C++)           -->
+    <!-- Visualizza Robot, Goal, Mappa e Buoys       -->
+    <!-- ============================================ -->
+    <group if="$(arg enable_rviz_simulation)">
+        
+        <!-- Mission Visualizer Node (C++ - sostituisce zeno_rviz_visualizer.py) -->
+        <node pkg="mm_bt" type="mission_visualizer" name="mission_visualizer" output="screen">
+            <param name="mission_memory_file" value="$(find mm_bt)/config/mission_memory.yaml"/>
+            <param name="max_path_length" value="1000"/>
+            <param name="min_distance_threshold" value="0.05"/>
+            
+            <!-- Map parameters loaded from YAML -->
+            <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+        </node>
+        
+        <!-- RViz with custom configuration -->
+        <node pkg="rviz" type="rviz" name="rviz" 
+              args="-d $(find mm_bt)/config/rviz/zeno_visualization.rviz"
+              output="screen"/>
+        
+        <!-- Static TF: map -> my_frame_id (handled internally by mission_visualizer) -->
+        <!-- No external static_transform_publisher needed -->
+        
+    </group>
+
+</launch>
+
+

@@ -1,0 +1,25 @@
+area_corners:
+
+  northeast:
+    latitude: 44.09611115206862
+    longitude: 9.865054589742114
+
+  northwest:
+    latitude: 44.09601351852949
+    longitude: 9.864608338509868
+
+  southeast:
+    latitude: 44.095752729346444
+    longitude: 9.86520762383199
+
+
+  southwest:
+    latitude: 44.095651845671284
+    longitude: 9.864767936334957
+
+ned_origin:
+  latitude:   44.09613064612619
+  longitude:  9.865068083462063
+  depth:      0.0
+
+

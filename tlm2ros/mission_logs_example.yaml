@@ -1,0 +1,1021 @@
+last_updated: '2025-10-27T12:04:35.997914'
+mission_types_reference:
+  '1': GOTO_WAYPOINT
+  '2': GATE_PASS_MISSION
+  '3': SURVEY_MISSION
+  '4': STOP_RESET
+  '5': FIND_SPECIFIC_BUOY
+  '6': MOVE_TO_BUOY
+missions:
+- log_count: 9
+  logs:
+  - log_level: INFO
+    message: '[MISSION COUNTER] New mission received. Counter: 1'
+    mission_counter: 1
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 865854385
+    ros_time_secs: 1761561755
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING...]'
+    mission_counter: 1
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 965747929
+    ros_time_secs: 1761561755
+  - log_level: INFO
+    message: 'GUIDANCE STATUS : [WAITING]'
+    mission_counter: 1
+    mission_phase: GUIDANCE_WAITING
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 965851729
+    ros_time_secs: 1761561755
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [SYSTEM READY]'
+    mission_counter: 1
+    mission_phase: SYSTEM_READY
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 65658873
+    ros_time_secs: 1761561756
+  - log_level: INFO
+    message: 'GUIDANCE STATUS : [ACTIVE]'
+    mission_counter: 1
+    mission_phase: GUIDANCE_ACTIVE
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 65762673
+    ros_time_secs: 1761561756
+  - log_level: INFO
+    message: GOING TO WP
+    mission_counter: 1
+    mission_phase: NAVIGATION_TO_WP
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 765650629
+    ros_time_secs: 1761561757
+  - log_level: INFO
+    message: WP REACHED
+    mission_counter: 1
+    mission_phase: WP_REACHED
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 265945406
+    ros_time_secs: 1761561795
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 1
+    mission_phase: STANDBY
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 266031906
+    ros_time_secs: 1761561795
+  - log_level: INFO
+    message: '[MISSION STATUS] Mission #1 - Status: COMPLETED'
+    mission_counter: 1
+    mission_phase: MISSION_COMPLETED
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 266244306
+    ros_time_secs: 1761561795
+  mission_counter: 1
+  mission_tag: 1
+  mission_type: GOTO_WAYPOINT
+- log_count: 52
+  logs:
+  - log_level: INFO
+    message: '[MISSION COUNTER] New mission received. Counter: 2'
+    mission_counter: 2
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 365918839
+    ros_time_secs: 1761561848
+  - log_level: WARN
+    message: '[... Go to WP ...]'
+    mission_counter: 2
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 465905715
+    ros_time_secs: 1761561848
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 465993615
+    ros_time_secs: 1761561848
+  - log_level: INFO
+    message: 'GUIDANCE STATUS : [WAITING]'
+    mission_counter: 2
+    mission_phase: GUIDANCE_WAITING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 466165615
+    ros_time_secs: 1761561848
+  - log_level: INFO
+    message: 'GUIDANCE STATUS : [ACTIVE]'
+    mission_counter: 2
+    mission_phase: GUIDANCE_ACTIVE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 565975692
+    ros_time_secs: 1761561848
+  - log_level: INFO
+    message: GOING TO WP
+    mission_counter: 2
+    mission_phase: NAVIGATION_TO_WP
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 965863297
+    ros_time_secs: 1761561848
+  - log_level: INFO
+    message: WP REACHED
+    mission_counter: 2
+    mission_phase: WP_REACHED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 166011238
+    ros_time_secs: 1761561884
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 2
+    mission_phase: WP_REACHED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 166231638
+    ros_time_secs: 1761561884
+  - log_level: WARN
+    message: '[... READY TO SEARCH BUOYS ...]'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_LAWN_START
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 166335638
+    ros_time_secs: 1761561884
+  - log_level: WARN
+    message: '[... STRATEGY: LAWN MOVER ...]'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_LAWN_START
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 166443939
+    ros_time_secs: 1761561884
+  - log_level: WARN
+    message: '[... GATE FINDER ...]'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_LAWN_START
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 166742339
+    ros_time_secs: 1761561884
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING SURVEY]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 166983639
+    ros_time_secs: 1761561884
+  - log_level: WARN
+    message: '[... SYSTEM SETTING ...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 167161539
+    ros_time_secs: 1761561884
+  - log_level: WARN
+    message: '[... GO SURVEY ...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 167256839
+    ros_time_secs: 1761561884
+  - log_level: INFO
+    message: 'Guidance: COMPLETED'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 167349439
+    ros_time_secs: 1761561884
+  - log_level: INFO
+    message: SURVEY RUNNING
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_LAWN
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 665986904
+    ros_time_secs: 1761561884
+  - log_level: INFO
+    message: '=== BUOY DISCOVERED AND SAVED TO MEMORY: boa_yellow_2 ==='
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 273422969
+    ros_time_secs: 1761562127
+  - log_level: INFO
+    message: Yellow buoy detected - stopping survey
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 465665828
+    ros_time_secs: 1761562127
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMED SURVEY]'
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 566000624
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[... ZENO STOP ON NAV STATUS ...]'
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 566556426
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[... SEARCHING 2nd BUOY ...]'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_SPIRAL
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 566982727
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[... STRATREGY: SPIRAL ...]'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_SPIRAL
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 567425029
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[SURVEY_CHECK] Called! Survey_completed=1'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_SPIRAL
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 567989731
+    ros_time_secs: 1761562127
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING SURVEY]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 568296833
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[... SYSTEM SETTING ...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 568875235
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[... GO SURVEY ...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 569920639
+    ros_time_secs: 1761562127
+  - log_level: INFO
+    message: 'Guidance: RUNNING'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 570199640
+    ros_time_secs: 1761562127
+  - log_level: INFO
+    message: SPIRAL SURVEY RUNNING
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_SPIRAL
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 570488141
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[SURVEY_CHECK] Called! Survey_completed=1'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_SPIRAL
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 965681201
+    ros_time_secs: 1761562127
+  - log_level: WARN
+    message: '[SURVEY_CHECK] Called! Survey_completed=1'
+    mission_counter: 2
+    mission_phase: SEARCH_BUOY_SPIRAL
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 65763904
+    ros_time_secs: 1761562128
+  - log_level: INFO
+    message: '=== BUOY DISCOVERED AND SAVED TO MEMORY: boa_yellow_1 ==='
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 845049279
+    ros_time_secs: 1761562336
+  - log_level: INFO
+    message: NEW BUOY FOUND
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 865847580
+    ros_time_secs: 1761562336
+  - log_level: INFO
+    message: SECOND BUOY FOUNDED
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 965683987
+    ros_time_secs: 1761562336
+  - log_level: WARN
+    message: '[SURVEY_CHECK] Called! Survey_completed=1'
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 65844699
+    ros_time_secs: 1761562337
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMED SURVEY]'
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 65952799
+    ros_time_secs: 1761562337
+  - log_level: WARN
+    message: '[... SYSTEM SETTING ...]'
+    mission_counter: 2
+    mission_phase: BUOY_DETECTED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 71016700
+    ros_time_secs: 1761562337
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING AP...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 71253500
+    ros_time_secs: 1761562337
+  - log_level: WARN
+    message: '[... GO IN FRONT OF GATE ...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 71339500
+    ros_time_secs: 1761562337
+  - log_level: INFO
+    message: APPROACHING GATE
+    mission_counter: 2
+    mission_phase: APPROACH_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 565653995
+    ros_time_secs: 1761562337
+  - log_level: INFO
+    message: APPROACHING GATE
+    mission_counter: 2
+    mission_phase: APPROACH_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 565954862
+    ros_time_secs: 1761562347
+  - log_level: INFO
+    message: READY TO GO OVER THE GATE
+    mission_counter: 2
+    mission_phase: APPROACH_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 365648885
+    ros_time_secs: 1761562353
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 2
+    mission_phase: APPROACH_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 365695586
+    ros_time_secs: 1761562353
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING GG...]'
+    mission_counter: 2
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 365739186
+    ros_time_secs: 1761562353
+  - log_level: WARN
+    message: '[... GO OVER GATE ...]'
+    mission_counter: 2
+    mission_phase: PASS_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 365807286
+    ros_time_secs: 1761562353
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMED AP]'
+    mission_counter: 2
+    mission_phase: PASS_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 465799024
+    ros_time_secs: 1761562353
+  - log_level: INFO
+    message: PASSING GATE
+    mission_counter: 2
+    mission_phase: PASS_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 865683074
+    ros_time_secs: 1761562353
+  - log_level: INFO
+    message: PASSING GATE
+    mission_counter: 2
+    mission_phase: PASS_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 866019683
+    ros_time_secs: 1761562363
+  - log_level: INFO
+    message: PASSING GATE
+    mission_counter: 2
+    mission_phase: PASS_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 865967510
+    ros_time_secs: 1761562373
+  - log_level: INFO
+    message: PASSING GATE
+    mission_counter: 2
+    mission_phase: PASS_GATE
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 865978032
+    ros_time_secs: 1761562383
+  - log_level: INFO
+    message: GATE PASSED
+    mission_counter: 2
+    mission_phase: GATE_PASSED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 65669206
+    ros_time_secs: 1761562385
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 2
+    mission_phase: GATE_PASSED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 65710806
+    ros_time_secs: 1761562385
+  - log_level: INFO
+    message: '[MISSION STATUS] Mission #2 - Status: COMPLETED'
+    mission_counter: 2
+    mission_phase: MISSION_COMPLETED
+    mission_tag: 2
+    mission_type: GATE_PASS_MISSION
+    ros_time_nsecs: 65924706
+    ros_time_secs: 1761562385
+  mission_counter: 2
+  mission_tag: 2
+  mission_type: GATE_PASS_MISSION
+- log_count: 13
+  logs:
+  - log_level: INFO
+    message: '[MISSION COUNTER] New mission received. Counter: 3'
+    mission_counter: 3
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 365912308
+    ros_time_secs: 1761562554
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING SURVEY]'
+    mission_counter: 3
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 465667363
+    ros_time_secs: 1761562554
+  - log_level: WARN
+    message: '[... SYSTEM SETTING ...]'
+    mission_counter: 3
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 465718563
+    ros_time_secs: 1761562554
+  - log_level: WARN
+    message: '[... GO SURVEY ...]'
+    mission_counter: 3
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 465863664
+    ros_time_secs: 1761562554
+  - log_level: INFO
+    message: 'Guidance: COMPLETED'
+    mission_counter: 3
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 465928364
+    ros_time_secs: 1761562554
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [SYSTEM READY]'
+    mission_counter: 3
+    mission_phase: SYSTEM_READY
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 865898787
+    ros_time_secs: 1761562554
+  - log_level: INFO
+    message: SURVEY RUNNING
+    mission_counter: 3
+    mission_phase: SURVEY_RUNNING
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 965993543
+    ros_time_secs: 1761562554
+  - log_level: INFO
+    message: '=== BUOY DISCOVERED AND SAVED TO MEMORY: boa_white_1 ==='
+    mission_counter: 3
+    mission_phase: BUOY_DETECTED
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 844531651
+    ros_time_secs: 1761562609
+  - log_level: INFO
+    message: '=== BUOY DISCOVERED AND SAVED TO MEMORY: boa_black_1 ==='
+    mission_counter: 3
+    mission_phase: BUOY_DETECTED
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 248227845
+    ros_time_secs: 1761562690
+  - log_level: INFO
+    message: '=== BUOY DISCOVERED AND SAVED TO MEMORY: boa_red_1 ==='
+    mission_counter: 3
+    mission_phase: BUOY_DETECTED
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 845548194
+    ros_time_secs: 1761562766
+  - log_level: INFO
+    message: SURVEY COMPLETED
+    mission_counter: 3
+    mission_phase: SURVEY_COMPLETED
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 966020413
+    ros_time_secs: 1761562849
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 3
+    mission_phase: SURVEY_COMPLETED
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 966076613
+    ros_time_secs: 1761562849
+  - log_level: INFO
+    message: '[MISSION STATUS] Mission #3 - Status: COMPLETED'
+    mission_counter: 3
+    mission_phase: MISSION_COMPLETED
+    mission_tag: 3
+    mission_type: SURVEY_MISSION
+    ros_time_nsecs: 966501113
+    ros_time_secs: 1761562849
+  mission_counter: 3
+  mission_tag: 3
+  mission_type: SURVEY_MISSION
+- log_count: 40
+  logs:
+  - log_level: INFO
+    message: '[MISSION COUNTER] New mission received. Counter: 4'
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 466079382
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: '[TAG 6] Reset completed_counter for new Move mission'
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 466164482
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: === STARTING MOVE MISSION ===
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 565983550
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: Checking mission memory for buoy...
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 566075550
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: Loaded 5 buoys from mission memory
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 586559064
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: 'Buoy of color ''white'' found in memory: boa_white_1 at (44.09583000,
+      9.86481000)'
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 586715764
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: Buoy found in memory! Loading position...
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 586762264
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: 'Loaded buoy ''boa_white_1'' from memory: (44.09583000, 9.86481000, 0.00)'
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 587835365
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: Buoy position loaded successfully
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 587898965
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: Buoy position available - determining move type...
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 587966165
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: ??? Buoy color 'white' mapped to move type 'move1'
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 589140366
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: Executing move1 Cardinal Points pattern
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 589263166
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: ???? Starting Move1 Mission (Cardinal Points)
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 589351566
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: Cardinal points calculated
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 589650866
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: ?????? Moving to NORTH point...
+    mission_counter: 4
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 665620318
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [SYSTEM READY]'
+    mission_counter: 4
+    mission_phase: SYSTEM_READY
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 765787087
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: ??? Buoy color 'white' mapped to move type 'move1'
+    mission_counter: 4
+    mission_phase: SYSTEM_READY
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 767376688
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: ???? Starting Move1 Mission (Cardinal Points)
+    mission_counter: 4
+    mission_phase: SYSTEM_READY
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 767535388
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: ??? Buoy color 'white' mapped to move type 'move1'
+    mission_counter: 4
+    mission_phase: SYSTEM_READY
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 866713356
+    ros_time_secs: 1761562944
+  - log_level: WARN
+    message: ???? Starting Move1 Mission (Cardinal Points)
+    mission_counter: 4
+    mission_phase: SYSTEM_READY
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 866914056
+    ros_time_secs: 1761562944
+  - log_level: INFO
+    message: GOING TO WP
+    mission_counter: 4
+    mission_phase: MOVING_TO_BUOY
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 65733094
+    ros_time_secs: 1761562945
+  - log_level: INFO
+    message: WP REACHED
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 165929846
+    ros_time_secs: 1761562968
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 166063046
+    ros_time_secs: 1761562968
+  - log_level: INFO
+    message: '[TAG 6] Cardinal point reached: 1/4'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 166186346
+    ros_time_secs: 1761562968
+  - log_level: WARN
+    message: ??? NORTH waypoint reached
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 166564846
+    ros_time_secs: 1761562968
+  - log_level: WARN
+    message: ?????? Moving to EAST point...
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 265784967
+    ros_time_secs: 1761562968
+  - log_level: INFO
+    message: WP REACHED
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 65731405
+    ros_time_secs: 1761562994
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 65803805
+    ros_time_secs: 1761562994
+  - log_level: INFO
+    message: '[TAG 6] Cardinal point reached: 2/4'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 65819205
+    ros_time_secs: 1761562994
+  - log_level: WARN
+    message: ??? EAST waypoint reached
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 65877705
+    ros_time_secs: 1761562994
+  - log_level: WARN
+    message: ?????? Moving to SOUTH point...
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 165746905
+    ros_time_secs: 1761562994
+  - log_level: INFO
+    message: WP REACHED
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 965774376
+    ros_time_secs: 1761563020
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 965861076
+    ros_time_secs: 1761563020
+  - log_level: INFO
+    message: '[TAG 6] Cardinal point reached: 3/4'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 965916776
+    ros_time_secs: 1761563020
+  - log_level: WARN
+    message: ??? SOUTH waypoint reached
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 966020476
+    ros_time_secs: 1761563020
+  - log_level: WARN
+    message: ?????? Moving to WEST point...
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 65766573
+    ros_time_secs: 1761563021
+  - log_level: INFO
+    message: WP REACHED
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 865941072
+    ros_time_secs: 1761563047
+  - log_level: INFO
+    message: '[STAND BY]'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 866064671
+    ros_time_secs: 1761563047
+  - log_level: INFO
+    message: '[TAG 6] Cardinal point reached: 4/4'
+    mission_counter: 4
+    mission_phase: BUOY_REACHED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 866149071
+    ros_time_secs: 1761563047
+  - log_level: INFO
+    message: '[MISSION STATUS] Mission #4 - Status: COMPLETED'
+    mission_counter: 4
+    mission_phase: MISSION_COMPLETED
+    mission_tag: 6
+    mission_type: MOVE_TO_BUOY
+    ros_time_nsecs: 866669871
+    ros_time_secs: 1761563047
+  mission_counter: 4
+  mission_tag: 6
+  mission_type: MOVE_TO_BUOY
+- log_count: 9
+  logs:
+  - log_level: INFO
+    message: '[MISSION COUNTER] New mission received. Counter: 5'
+    mission_counter: 5
+    mission_phase: MISSION_ACCEPTED
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 65831917
+    ros_time_secs: 1761563061
+  - log_level: INFO
+    message: 'SYSTEM STATUS: [PERFORMING...]'
+    mission_counter: 5
+    mission_phase: SYSTEM_PERFORMING
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 165765703
+    ros_time_secs: 1761563061
+  - log_level: INFO
+    message: 'GUIDANCE STATUS : [WAITING]'
+    mission_counter: 5
+    mission_phase: GUIDANCE_WAITING
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 166016303
+    ros_time_secs: 1761563061
+  - log_level: INFO
+    message: 'GUIDANCE STATUS : [ACTIVE]'
+    mission_counter: 5
+    mission_phase: GUIDANCE_ACTIVE
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 265711189
+    ros_time_secs: 1761563061
+  - log_level: INFO
+    message: GOING TO WP
+    mission_counter: 5
+    mission_phase: NAVIGATION_TO_WP
+    mission_tag: 1
+    mission_type: GOTO_WAYPOINT
+    ros_time_nsecs: 265760389
+    ros_time_secs: 1761563061
+  - log_level: INFO
+    message: 'Mission received: ID=10, TAG=4, Color='
+    mission_counter: 5
+    mission_phase: NAVIGATION_TO_WP
+    mission_tag: 4
+    mission_type: STOP_RESET
+    ros_time_nsecs: 466013132
+    ros_time_secs: 1761563075
+  - log_level: INFO
+    message: ZENO STOP THRUSTERS
+    mission_counter: 5
+    mission_phase: STOPPING
+    mission_tag: 4
+    mission_type: STOP_RESET
+    ros_time_nsecs: 466228432
+    ros_time_secs: 1761563075
+  - log_level: INFO
+    message: Stop message sent
+    mission_counter: 5
+    mission_phase: STOPPING
+    mission_tag: 4
+    mission_type: STOP_RESET
+    ros_time_nsecs: 987183722
+    ros_time_secs: 1761563075
+  - log_level: INFO
+    message: '[MISSION STATUS] Mission #6 - Status: ABORTED'
+    mission_counter: 5
+    mission_phase: MISSION_ABORTED
+    mission_tag: 4
+    mission_type: STOP_RESET
+    ros_time_nsecs: 987478423
+    ros_time_secs: 1761563075
+  mission_counter: 5
+  mission_tag: 4
+  mission_type: STOP_RESET
+total_log_entries: 123
+total_missions: 5

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- ============================================ -->
+    <!-- GAMMA_BT PLAYBACK LAUNCHER                  -->
+    <!-- Plays rosbag and launches visualization     -->
+    <!-- ============================================ -->
+
+    <!-- Arguments -->
+    <arg name="bag_name" default="gamma_bt_recording"/>
+    <arg name="playback_rate" default="1.0"/>
+    <arg name="start_paused" default="false"/>
+    <arg name="loop" default="false"/>
+    
+    <!-- Build conditional arguments -->
+    <arg name="loop_arg" value="-l" if="$(arg loop)"/>
+    <arg name="loop_arg" value="" unless="$(arg loop)"/>
+    <arg name="pause_arg" value="--pause" if="$(arg start_paused)"/>
+    <arg name="pause_arg" value="" unless="$(arg start_paused)"/>
+    
+    <!-- ✅ CARICA PARAMETRI MAPPA RAMI AREA 1 -->
+    <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+
+    <!-- ✅ Load mission objects YAML (buoys and obstacles) -->
+    <rosparam command="load" file="$(find mm_bt)/config/mission_objects.yaml"/>
+
+
+
+    <!-- ============================================ -->
+    <!-- 1. ROSBAG PLAYBACK                          -->
+    <!-- ============================================ -->
+    <node pkg="rosbag"
+          type="play"
+          name="rosbag_player"
+          args="--clock -r $(arg playback_rate) $(arg loop_arg) $(arg pause_arg) $(find mm_bt)/bags/$(arg bag_name).bag"
+          output="screen"/>
+
+
+
+    <!-- ============================================ -->
+    <!-- 2. VISUALIZATION NODES                      -->
+    <!-- ============================================ -->
+    
+    <!-- Mission Visualizer Node (C++) -->
+    <node pkg="mm_bt" type="mission_visualizer" name="mission_visualizer" output="screen">
+        <param name="mission_memory_file" value="$(find mm_bt)/config/mission_memory.yaml"/>
+        <param name="max_path_length" value="1000"/>
+        <param name="min_distance_threshold" value="0.05"/>
+        
+        <!-- Map parameters loaded from YAML -->
+        <rosparam command="load" file="$(find guidance_pkg)/config/RAMI_area_1.yaml"/>
+    </node>
+    
+    <!-- RViz with custom configuration -->
+    <node pkg="rviz" type="rviz" name="rviz" 
+          args="-d $(find mm_bt)/config/rviz/zeno_visualization.rviz"
+          output="screen"/>
+
+
+
+</launch>

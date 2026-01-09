@@ -1,0 +1,1673 @@
+##########################################################################
+COMMANDS:
+##########################################################################
+
+GO TO RECEIVED WAYPOINT:
+"Reach the waypoint received", #1
+"Arrive at the waypoint received", #2
+"Navigate to the waypoint received", #3
+"Proceed to the waypoint received", #4
+
+"reach and arrive at the designated waypoint that was received", #1
+"navigate to the waypoint obtained and proceed toward its location", #2
+"advance to the transmitted waypoint coordinates that were received", #3
+"travel to the specified waypoint location obtained from the system", #4
+"move toward and reach the waypoint data that was received", #5
+"go to the waypoint received and execute arrival at the coordinates", #6
+"progress toward the designated waypoint that was obtained and transmitted", #7
+"approach and attain the waypoint location received from the command", #8
+
+PASS THROUGH GATE:
+"pass through the gate", #1
+"transit through the gate", #2
+"navigate through the gate", #3
+"proceed through the gate", #4
+
+"pass through the gate and advance between the marked yellow buoys", #1
+"navigate through the gate structure while passing between the buoys", #2
+"traverse through the marked gate opening between the yellow buoys", #3
+"proceed through the gate passage and cross between the designated buoys", #4
+"transit through the buoy gate and pass between the marked markers", #5
+"move through the gate while navigating between the yellow buoys correctly", #6
+"go through the marked gate entrance and advance between the buoy markers", #7
+"cross through the gate passage situated between the yellow buoys", #8
+
+MAP BUOY AREA:
+"Map the coloured buoy area providing a geo-localised map with the buoy positions", #1
+"Chart the coloured buoy area providing a geo-localised map with the buoy positions", #2
+"Survey the coloured buoy area providing a geo-localised map with the buoy positions", #3
+"Document the coloured buoy area providing a geo-localised map with the buoy positions", #4
+
+"map and chart the coloured buoy area while generating a comprehensive geo-localised map with all buoy positions", #1
+"survey the coloured buoy area and deliver a detailed geo-localised map showing the exact positions of all buoys", #2
+"document the coloured buoy area by providing a precise geo-localised map with marked buoy location coordinates", #3
+"plot the coloured buoy area and supply a complete geo-localised map including all buoy positions and spatial references", #4
+"chart the coloured buoy area delivering a geo-localised map that accurately represents all colored buoy positions", #5
+"map the coloured buoy area generating a comprehensive geo-localised map with precise buoy position data", #6
+"survey and document the coloured buoy area providing a geo-localised map with complete buoy position information", #7
+"plot the coloured buoy area while supplying a detailed geo-localised map with all buoy locations and coordinates", #8
+
+PERFORM MOVES:
+"Detect the colours of each buoy and react in a specific mode", #1
+"Identify the colours of each buoy and react in a specific mode", #2
+"Recognise the colours of each buoy and react in a specific mode", #3
+"Determine the colours of each buoy and react in a specific mode", #4
+
+"detect and identify the specific colours of each individual buoy and respond accordingly in the designated operational mode", #1
+"recognise the colours of each buoy and react dynamically in a specific predetermined mode", #2
+"determine the exact colours of each buoy present and execute the appropriate response in the specified mode", #3
+"sense the buoy colours accurately and operate in a specific mode based on the detected color information", #4
+"identify the colours of each buoy and activate the corresponding reaction protocol in the designated mode", #5
+"detect the colors of all buoys and respond intelligently in the specific operational mode selected", #6
+"recognise and process the buoy colours, then react appropriately in the specified operational mode", #7
+"determine the colours of each buoy within the area and execute actions in the designated response mode", #8
+
+##########################################################################
+SESSION 1
+##########################################################################
+📝 Command: 'go to the received waypoint'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'pass through the gate'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'map the coloured buoy area'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'perform the specific move for each buoys'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763047158.5414193,WSL22->WSL18,/send_mission,1763047158.527532,1763047158.541394,13.861894607543945
+1763047226.7175195,WSL22->WSL18,/send_mission,1763047226.7061744,1763047226.7174933,11.31892204284668
+1763047499.955145,WSL22->WSL18,/send_mission,1763047499.9426494,1763047499.9550931,12.443780899047852
+1763047654.482237,WSL22->WSL18,/send_mission,1763047653.3311646,1763047654.4821799,1151.015281677246
+1763048500.6455135,WSL22->WSL18,/send_mission,1763048500.6118846,1763048500.6453936,33.509016036987305
+1763048610.190149,WSL22->WSL18,/send_mission,1763048610.1663918,1763048610.190124,23.73218536376953
+1763048729.7047668,WSL22->WSL18,/send_mission,1763048729.6824408,1763048729.7047415,22.30072021484375
+
+REASOURCES MEAS:
+{
+  "sessions": [
+    {
+      "start_time": "2025-11-13T16:18:52.074987",
+      "end_time": "2025-11-13T16:48:00.265672",
+      "start_timestamp": 1763047132.074987,
+      "end_timestamp": 1763048880.265672,
+      "duration_seconds": 1748.1906850337982,
+      "stats": {
+        "cpu": {
+          "mean": 1.5756880733944953,
+          "std": 9.657143371853637,
+          "min": 0.0,
+          "max": 105.8,
+          "median": 0.0
+        },
+        "memory_mb": {
+          "mean": 1462.1290854357799,
+          "std": 64.98272024066101,
+          "min": 848.28125,
+          "max": 1472.53125,
+          "median": 1469.28125
+        },
+        "memory_percent": {
+          "mean": 38.45463390181628,
+          "std": 1.709074534057042,
+          "min": 22.31016429551824,
+          "max": 38.72820968020317,
+          "median": 38.64273327251358
+        },
+        "threads": {
+          "mean": 21.90309633027523,
+          "std": 0.29775852214415105,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 181.5546875,
+          "mean_rate": 0.0013446643717728054
+        },
+        "io_write_mb": {
+          "total": 0.40625,
+          "mean_rate": 0.0002151462994836489
+        },
+        "total_samples": 1744
+      }
+    }
+  ]
+}
+
+##########################################################################
+SESSION 2
+##########################################################################
+📝 Command: 'Navigate to the waypoint received'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'navigate through the gate'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'Survey the coloured buoy area providing a geo-localised map with the buoy positions'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+📝 Command: 'Recognise the colours of each buoy and react in a specific mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763051539.5314813,WSL22->WSL18,/send_mission,1763051539.503242,1763051539.5313435,28.101444244384766
+1763051688.400066,WSL22->WSL18,/send_mission,1763051688.3744953,1763051688.4000392,25.543928146362305
+1763051928.8526843,WSL22->WSL18,/send_mission,1763051928.8162205,1763051928.8525882,36.36765480041504
+1763052083.9732609,WSL22->WSL18,/send_mission,1763052083.9403684,1763052083.973213,32.84454345703125
+1763052914.0048952,WSL22->WSL18,/send_mission,1763052913.9320889,1763052914.0047274,72.63851165771484
+1763053023.714074,WSL22->WSL18,/send_mission,1763053023.6807983,1763053023.7137098,32.91153907775879
+1763053143.215068,WSL22->WSL18,/send_mission,1763053143.1822004,1763053143.2144637,32.26327896118164
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-13T17:31:37.158783",
+      "end_time": "2025-11-13T18:02:46.160033",
+      "start_timestamp": 1763051497.158783,
+      "end_timestamp": 1763053366.160033,
+      "duration_seconds": 1869.0012500286102,
+      "stats": {
+        "cpu": {
+          "mean": 2.053064516129032,
+          "std": 10.556901949946484,
+          "min": 0.0,
+          "max": 104.3,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1465.5442456317205,
+          "std": 88.89438612831705,
+          "min": 848.23046875,
+          "max": 1481.48046875,
+          "median": 1478.48046875
+        },
+        "memory_percent": {
+          "mean": 38.54445550900839,
+          "std": 2.3379620662576723,
+          "min": 22.30882872664809,
+          "max": 38.96357800955034,
+          "median": 38.884676710144575
+        },
+        "threads": {
+          "mean": 21.850537634408603,
+          "std": 0.3625250917275084,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1586.8828125,
+          "mean_rate": 0.04620889927380312
+        },
+        "io_write_mb": {
+          "total": 0.41015625,
+          "mean_rate": 0.0002059238838084992
+        },
+        "total_samples": 1860
+      }
+    }
+
+##########################################################################
+SESSION 3
+##########################################################################
+📝 Command: 'Arrive at the waypoint received'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'transit through the gate'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'Chart the coloured buoy area providing a geo-localised map with the buoy positions'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'Identify the colours of each buoy and react in a specific mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+
+LATENCY MEAS:
+1763107832.9253786,WSL22->WSL18,/send_mission,1763107831.357153,1763107832.924845,1567.6920413970947
+1763107895.271961,WSL22->WSL18,/send_mission,1763107895.256272,1763107895.2719321,15.66004753112793
+1763108299.260268,WSL22->WSL18,/send_mission,1763108299.2276738,1763108299.260176,32.502174377441406
+1763108449.5623085,WSL22->WSL18,/send_mission,1763108449.5399349,1763108449.5622225,22.287607192993164
+1763109258.181362,WSL22->WSL18,/send_mission,1763109258.0690176,1763109258.1812098,112.19215393066406
+1763109364.2459023,WSL22->WSL18,/send_mission,1763109364.2156549,1763109364.2457674,30.112504959106445
+1763109479.1102886,WSL22->WSL18,/send_mission,1763109478.8560727,1763109479.110263,254.19044494628906
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-14T09:10:07.051360",
+      "end_time": "2025-11-14T09:44:43.173455",
+      "start_timestamp": 1763107807.05136,
+      "end_timestamp": 1763109883.173455,
+      "duration_seconds": 2076.122095108032,
+      "stats": {
+        "cpu": {
+          "mean": 2.5001861330851556,
+          "std": 11.990001649923506,
+          "min": 0.0,
+          "max": 99.9,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1471.1834428804095,
+          "std": 49.31253806250761,
+          "min": 854.84375,
+          "max": 1478.21875,
+          "median": 1475.46875
+        },
+        "memory_percent": {
+          "mean": 38.692764828788135,
+          "std": 1.2969415194023406,
+          "min": 22.48276088796837,
+          "max": 38.87779339365996,
+          "median": 38.80546720253799
+        },
+        "threads": {
+          "mean": 21.745463006049324,
+          "std": 0.43773193110942654,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1592.359375,
+          "mean_rate": 0.040442781075418995
+        },
+        "io_write_mb": {
+          "total": 0.40625,
+          "mean_rate": 0.00017458100558659218
+        },
+        "total_samples": 2149
+      }
+    }
+##########################################################################
+SESSION 4
+##########################################################################
+📝 Command: 'Proceed to the waypoint received'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'proceed through the gate'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'Document the coloured buoy area providing a geo-localised map with the buoy positions'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'Determine the colours of each buoy and react in a specific mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763110081.1227875,WSL22->WSL18,/send_mission,1763110080.7715592,1763110081.1227596,351.2003421783447
+1763110167.8144627,WSL22->WSL18,/send_mission,1763110167.793372,1763110167.8143036,20.931720733642578
+1763110720.209218,WSL22->WSL18,/send_mission,1763110720.1366224,1763110720.2090428,72.42035865783691
+1763110871.7196684,WSL22->WSL18,/send_mission,1763110871.6861646,1763110871.7194765,33.31184387207031
+1763111719.0756724,WSL22->WSL18,/send_mission,1763111719.0142078,1763111719.0753438,61.13600730895996
+1763111826.400723,WSL22->WSL18,/send_mission,1763111826.3779771,1763111826.4006748,22.69768714904785
+1763111944.0274603,WSL22->WSL18,/send_mission,1763111943.9984477,1763111944.0273929,28.945207595825195
+
+RESOURCES MEAS:
+    {
+      "start_time": "2025-11-14T09:47:29.474544",
+      "end_time": "2025-11-14T10:23:38.150615",
+      "start_timestamp": 1763110049.474544,
+      "end_timestamp": 1763112218.150615,
+      "duration_seconds": 2168.6760709285736,
+      "stats": {
+        "cpu": {
+          "mean": 1.8665916253939665,
+          "std": 9.472700202233188,
+          "min": 0.0,
+          "max": 98.8,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1459.528413088136,
+          "std": 68.21208284450921,
+          "min": 848.40234375,
+          "max": 1469.90234375,
+          "median": 1467.52734375
+        },
+        "memory_percent": {
+          "mean": 38.386232397860994,
+          "std": 1.7940075950719023,
+          "min": 22.313349113593215,
+          "max": 38.65906830715618,
+          "median": 38.59660477845995
+        },
+        "threads": {
+          "mean": 21.875731652408824,
+          "std": 0.33260594691456385,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 828.44921875,
+          "mean_rate": 0.03711817286036036
+        },
+        "io_write_mb": {
+          "total": 0.43359375,
+          "mean_rate": 0.00018123592342342342
+        },
+        "total_samples": 2221
+      }
+    }
+##########################################################################
+SESSION 5 - start using test commands
+##########################################################################
+📝 Command: 'reach and arrive at the designated waypoint that was received'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'pass through the gate and advance between the marked yellow buoys'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'map and chart the coloured buoy area while generating a comprehensive geo-localised map with all buoy positions'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 57.1%
+  🔶 Confidence = 55.7%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'detect and identify the specific colours of each individual buoy and respond accordingly in the designated operational mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763118379.5592313,WSL22->WSL18,/send_mission,1763118378.7654169,1763118379.5578327,792.4158573150635
+1763118486.2582781,WSL22->WSL18,/send_mission,1763118486.2366457,1763118486.258185,21.53921127319336
+1763119108.3252878,WSL22->WSL18,/send_mission,1763119108.278353,1763119108.3250465,46.69356346130371
+1763119265.9535103,WSL22->WSL18,/send_mission,1763119265.9284983,1763119265.9534853,24.986982345581055
+1763120172.5365994,WSL22->WSL18,/send_mission,1763120172.4524424,1763120172.5361288,83.68635177612305
+1763120282.1780446,WSL22->WSL18,/send_mission,1763120282.150443,1763120282.1779656,27.522563934326172
+1763120401.6743665,WSL22->WSL18,/send_mission,1763120401.6326942,1763120401.6742277,41.533470153808594
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-14T12:04:41.304681",
+      "end_time": "2025-11-14T12:46:14.694124",
+      "start_timestamp": 1763118281.304681,
+      "end_timestamp": 1763120774.694124,
+      "duration_seconds": 2493.389442920685,
+      "stats": {
+        "cpu": {
+          "mean": 2.1976659959758553,
+          "std": 10.917605932662902,
+          "min": 0.0,
+          "max": 101.9,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1456.678994278169,
+          "std": 114.55534658916363,
+          "min": 854.84765625,
+          "max": 1481.72265625,
+          "median": 1478.72265625
+        },
+        "memory_percent": {
+          "mean": 38.31129113446696,
+          "std": 3.012845976562492,
+          "min": 22.48286362403531,
+          "max": 38.969947645700294,
+          "median": 38.891046346294516
+        },
+        "threads": {
+          "mean": 21.775452716297785,
+          "std": 0.418247092109454,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1612.09765625,
+          "mean_rate": 0.03443287037037037
+        },
+        "io_write_mb": {
+          "total": 0.40625,
+          "mean_rate": 0.00015096618357487922
+        },
+        "total_samples": 2485
+      }
+    }
+
+##########################################################################
+SESSION 6
+##########################################################################
+📝 Command: 'navigate to the waypoint obtained and proceed toward its location'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'navigate through the gate structure while passing between the buoys'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'survey the coloured buoy area and deliver a detailed geo-localised map showing the exact positions of all buoys'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+📝 Command: 'recognise the colours of each buoy and react dynamically in a specific predetermined mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763121110.0620878,WSL22->WSL18,/send_mission,1763121109.965503,1763121110.0613737,95.8707332611084
+1763121297.4611344,WSL22->WSL18,/send_mission,1763121297.4317832,1763121297.461083,29.29973602294922
+1763121862.738585,WSL22->WSL18,/send_mission,1763121862.679408,1763121862.7384312,59.023141860961914
+1763122017.1446786,WSL22->WSL18,/send_mission,1763122016.2171676,1763122017.1446333,927.4656772613525
+1763122984.860868,WSL22->WSL18,/send_mission,1763122984.796731,1763122984.860754,64.02301788330078
+1763123094.4482682,WSL22->WSL18,/send_mission,1763123094.4134464,1763123094.4481523,34.70587730407715
+1763123213.9180005,WSL22->WSL18,/send_mission,1763123213.9052157,1763123213.9179592,12.743473052978516
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-14T12:51:35.692692",
+      "end_time": "2025-11-14T13:35:49.379911",
+      "start_timestamp": 1763121095.692692,
+      "end_timestamp": 1763123749.379911,
+      "duration_seconds": 2653.6872189044952,
+      "stats": {
+        "cpu": {
+          "mean": 1.2414873537183841,
+          "std": 8.421593847775595,
+          "min": 0.0,
+          "max": 102.0,
+          "median": 0.0
+        },
+        "memory_mb": {
+          "mean": 1473.0619366978106,
+          "std": 35.31575354965499,
+          "min": 854.1328125,
+          "max": 1477.8828125,
+          "median": 1475.0078125
+        },
+        "memory_percent": {
+          "mean": 38.74216945232429,
+          "std": 0.9288197428278908,
+          "min": 22.464062923786276,
+          "max": 38.86895809190358,
+          "median": 38.79334434663971
+        },
+        "threads": {
+          "mean": 21.724046810117024,
+          "std": 0.44867920684091767,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 438.2734375,
+          "mean_rate": 0.0186446728663142
+        },
+        "io_write_mb": {
+          "total": 0.41015625,
+          "mean_rate": 0.0001430914841389728
+        },
+        "total_samples": 2649
+      }
+    }
+##########################################################################
+SESSION 7
+##########################################################################
+📝 Command: 'advance to the transmitted waypoint coordinates that were received'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'traverse through the marked gate opening between the yellow buoys'
+----------------------------------------
+🧠 Step 1: Planning mission with LM...
+✅ Loaded 20 missions
+✅ Loaded 2 mission aliases: make move A, make move B
+------------------------------------------------------------
+🖊️ Model prompt:
+Available missions: skip, go to NW goal, go to NE goal, go to SW goal, go to SE goal, NW quadrant survey, NE quadrant survey, SW quadrant survey, SE quadrant survey, central survey, go to received goal, cross gate, map buoy area A, map buoy area B, make move red A, make move white A, make move black A, make move red B, make move white B, make move black B, stop mission
+    Memory: Previous missions: go to received goal
+    Command: traverse through the marked gate opening between the yellow buoys
+Instruction: Given the command and the mission memory, generate one or more missions from the available missions. If multiple missions are needed, separate them with commas.
+
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'document the coloured buoy area by providing a precise geo-localised map with marked buoy location coordinates'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'determine the exact colours of each buoy present and execute the appropriate response in the specified mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763126817.5542881,WSL22->WSL18,/send_mission,1763126817.35378,1763126817.553838,200.0579833984375
+1763126909.4078827,WSL22->WSL18,/send_mission,1763126909.3872263,1763126909.4078422,20.615816116333008
+1763127519.4288094,WSL22->WSL18,/send_mission,1763127519.359855,1763127519.4286497,68.79472732543945
+1763127673.2110054,WSL22->WSL18,/send_mission,1763127673.109404,1763127673.21098,101.57585144042969
+1763129426.116229,WSL22->WSL18,/send_mission,1763129425.8382688,1763129426.116085,277.8162956237793
+1763129449.7109852,WSL22->WSL18,/send_mission,1763129449.6847157,1763129449.7105196,25.803804397583008
+1763129709.746403,WSL22->WSL18,/send_mission,1763129709.7273226,1763129709.7463768,19.054174423217773
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-14T14:26:36.476472",
+      "end_time": "2025-11-14T15:20:27.956278",
+      "start_timestamp": 1763126796.476472,
+      "end_timestamp": 1763130027.956278,
+      "duration_seconds": 3231.4798061847687,
+      "stats": {
+        "cpu": {
+          "mean": 1.59984496124031,
+          "std": 9.704265983088915,
+          "min": 0.0,
+          "max": 101.9,
+          "median": 0.0
+        },
+        "memory_mb": {
+          "mean": 1474.4860041182171,
+          "std": 39.685021911418026,
+          "min": 854.51953125,
+          "max": 1480.76953125,
+          "median": 1477.01953125
+        },
+        "memory_percent": {
+          "mean": 38.77962157958184,
+          "std": 1.0437334057873036,
+          "min": 22.4742337944128,
+          "max": 38.944880045368244,
+          "median": 38.84625342111103
+        },
+        "threads": {
+          "mean": 21.612403100775193,
+          "std": 0.4910055734598944,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1594.19921875,
+          "mean_rate": 0.026333262251861042
+        },
+        "io_write_mb": {
+          "total": 0.51953125,
+          "mean_rate": 0.0001514520006203474
+        },
+        "total_samples": 3225
+      }
+    }
+##########################################################################
+SESSION 8
+##########################################################################
+📝 Command: 'travel to the specified waypoint location obtained from the system'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+📝 Command: 'proceed through the gate passage and cross between the designated buoys'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'plot the coloured buoy area and supply a complete geo-localised map including all buoy positions and spatial references'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+📝 Command: 'sense the buoy colours accurately and operate in a specific mode based on the detected color information'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 57.1%
+  🔶 Confidence = 55.7%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763129426.116229,WSL22->WSL18,/send_mission,1763129425.8382688,1763129426.116085,277.8162956237793
+1763129449.7109852,WSL22->WSL18,/send_mission,1763129449.6847157,1763129449.7105196,25.803804397583008
+1763129709.746403,WSL22->WSL18,/send_mission,1763129709.7273226,1763129709.7463768,19.054174423217773
+1763130193.6708608,WSL22->WSL18,/send_mission,1763130193.4627457,1763130193.6698115,207.06582069396973
+1763130312.994112,WSL22->WSL18,/send_mission,1763130312.953761,1763130312.9940116,40.250539779663086
+1763131429.1250138,WSL22->WSL18,/send_mission,1763131428.840256,1763131429.1237235,283.46753120422363
+1763131583.5247166,WSL22->WSL18,/send_mission,1763131582.4488254,1763131583.5246918,1075.866460800171
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-14T15:22:42.008782",
+      "end_time": "2025-11-14T16:11:31.295100",
+      "start_timestamp": 1763130162.008782,
+      "end_timestamp": 1763133091.2951,
+      "duration_seconds": 2929.286318063736,
+      "stats": {
+        "cpu": {
+          "mean": 1.1419883840109326,
+          "std": 7.828957086115415,
+          "min": 0.0,
+          "max": 102.1,
+          "median": 0.0
+        },
+        "memory_mb": {
+          "mean": 1485.6522476618552,
+          "std": 56.29559458423203,
+          "min": 854.55859375,
+          "max": 1492.18359375,
+          "median": 1491.43359375
+        },
+        "memory_percent": {
+          "mean": 39.07329872505881,
+          "std": 1.4805865720411384,
+          "min": 22.475261155082148,
+          "max": 39.245074832951154,
+          "median": 39.22534950809971
+        },
+        "threads": {
+          "mean": 21.423641954219338,
+          "std": 0.49482597175078186,
+          "min": 20,
+          "max": 22,
+          "median": 21.0
+        },
+        "io_read_mb": {
+          "total": 554.8515625,
+          "mean_rate": 0.020711402084757347
+        },
+        "io_write_mb": {
+          "total": 0.20703125,
+          "mean_rate": 6.141062884483937e-05
+        },
+        "total_samples": 2927
+      }
+    }
+##########################################################################
+SESSION 9
+##########################################################################
+📝 Command: 'sense the buoy colours accurately and operate in a specific mode based on the detected color information'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 57.1%
+  🔶 Confidence = 55.7%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: make move B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+📝 Command: 'move toward and reach the waypoint data that was received'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'transit through the buoy gate and pass between the marked markers'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763136082.300007,WSL22->WSL18,/send_mission,1763136082.2689717,1763136082.2999086,30.93695640563965
+1763136241.4029903,WSL22->WSL18,/send_mission,1763136241.2470546,1763136241.4022088,155.15422821044922
+1763136631.5549724,WSL22->WSL18,/send_mission,1763136631.5273557,1763136631.5548646,27.508974075317383
+1763137013.662795,WSL22->WSL18,/send_mission,1763137013.637765,1763137013.662754,24.98912811279297
+1763137166.625783,WSL22->WSL18,/send_mission,1763137166.5941806,1763137166.625715,31.534433364868164
+1763137589.8782063,WSL22->WSL18,/send_mission,1763137589.672122,1763137589.877269,205.14702796936035
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-14T17:01:01.541343",
+      "end_time": "2025-11-14T17:30:11.147388",
+      "start_timestamp": 1763136061.541343,
+      "end_timestamp": 1763137811.147388,
+      "duration_seconds": 1749.6060450077057,
+      "stats": {
+        "cpu": {
+          "mean": 2.536029833620195,
+          "std": 11.924292096880714,
+          "min": 0.0,
+          "max": 102.9,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1463.2821307551635,
+          "std": 53.358943058979406,
+          "min": 850.30859375,
+          "max": 1471.05859375,
+          "median": 1468.05859375
+        },
+        "memory_percent": {
+          "mean": 38.484955724091265,
+          "std": 1.4033635735091785,
+          "min": 22.363484314257303,
+          "max": 38.68947818296883,
+          "median": 38.610576883563056
+        },
+        "threads": {
+          "mean": 21.76477337923121,
+          "std": 0.4268371487015211,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1605.3671875,
+          "mean_rate": 0.04801189365671642
+        },
+        "io_write_mb": {
+          "total": 0.390625,
+          "mean_rate": 0.00020630022962112515
+        },
+        "total_samples": 1743
+      }
+    }
+##########################################################################
+SESSION 10
+##########################################################################
+📝 Command: 'chart the coloured buoy area delivering a geo-localised map that accurately represents all colored buoy positions'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'move through the gate while navigating between the yellow buoys correctly'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'detect the colors of all buoys and respond intelligently in the specific operational mode selected'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+📝 Command: 'go to the waypoint received and execute arrival at the coordinates'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763217692.1655378,WSL22->WSL18,/send_mission,1763217691.8743012,1763217692.1650538,290.752649307251
+1763217846.6493003,WSL22->WSL18,/send_mission,1763217845.7361605,1763217846.6492693,913.1088256835938
+1763218749.6002188,WSL22->WSL18,/send_mission,1763218749.369901,1763218749.5997784,229.87747192382812
+1763218993.6028478,WSL22->WSL18,/send_mission,1763218993.5689104,1763218993.6026132,33.702850341796875
+1763219149.331256,WSL22->WSL18,/send_mission,1763219149.3040898,1763219149.3312125,27.12273597717285
+1763219268.247585,WSL22->WSL18,/send_mission,1763219268.2138767,1763219268.2474966,33.61988067626953
+1763219415.6807654,WSL22->WSL18,/send_mission,1763219415.6423063,1763219415.6807404,38.43402862548828
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-15T15:40:09.392627",
+      "end_time": "2025-11-15T16:11:52.388875",
+      "start_timestamp": 1763217609.392627,
+      "end_timestamp": 1763219512.388875,
+      "duration_seconds": 1902.9962480068207,
+      "stats": {
+        "cpu": {
+          "mean": 2.0917194092827005,
+          "std": 11.14500370534505,
+          "min": 0.0,
+          "max": 101.9,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1448.4733155327003,
+          "std": 122.80239966969253,
+          "min": 854.83203125,
+          "max": 1477.20703125,
+          "median": 1473.45703125
+        },
+        "memory_percent": {
+          "mean": 38.095439913501004,
+          "std": 3.2297385682380493,
+          "min": 22.485717132968073,
+          "max": 38.851144838185725,
+          "median": 38.75251831525352
+        },
+        "threads": {
+          "mean": 21.87710970464135,
+          "std": 0.3346754845339199,
+          "min": 21,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1593.0078125,
+          "mean_rate": 0.04561345646437995
+        },
+        "io_write_mb": {
+          "total": 0.41015625,
+          "mean_rate": 0.00019995052770448548
+        },
+        "total_samples": 1896
+      }
+    }
+##########################################################################
+SESSION 11
+##########################################################################
+📝 Command: 'go through the marked gate entrance and advance between the buoy markers'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+FAILED! second buoy not found
+
+📝 Command: 'stop'
+------------------------------------------------------------
+🧠 Model raw response: stop mission
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: stop mission
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'recognise and process the buoy colours, then react appropriately in the specified operational mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: make move B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+
+📝 Command: 'progress toward the designated waypoint that was obtained and transmitted'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+
+📝 Command: 'go through the marked gate entrance and advance between the buoy markers'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+LATENCY MEAS:
+1763219726.3271813,WSL22->WSL18,/send_mission,1763219726.0758283,1763219726.327144,251.31559371948242
+1763220315.767728,WSL22->WSL18,/send_mission,1763220315.6964638,1763220315.7675762,71.11239433288574
+1763220483.1752067,WSL22->WSL18,/send_mission,1763220483.142772,1763220483.1750908,32.318830490112305
+1763220555.7513912,WSL22->WSL18,/send_mission,1763220555.7241201,1763220555.7513273,27.207136154174805
+1763220707.0892994,WSL22->WSL18,/send_mission,1763220706.9428465,1763220707.0890584,146.2118625640869
+1763221097.384092,WSL22->WSL18,/send_mission,1763221097.3109174,1763221097.383955,73.03762435913086
+1763221479.7152855,WSL22->WSL18,/send_mission,1763221479.6422386,1763221479.7151995,72.96085357666016
+1763221666.7697246,WSL22->WSL18,/send_mission,1763221666.7477891,1763221666.7696738,21.884679794311523
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-15T16:15:15.059396",
+      "end_time": "2025-11-15T16:49:00.261186",
+      "start_timestamp": 1763219715.059396,
+      "end_timestamp": 1763221740.261186,
+      "duration_seconds": 2025.201789855957,
+      "stats": {
+        "cpu": {
+          "mean": 5.234691848906561,
+          "std": 19.75045735823141,
+          "min": 0.0,
+          "max": 110.0,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1435.0276466202783,
+          "std": 39.77857382188588,
+          "min": 851.76171875,
+          "max": 1464.63671875,
+          "median": 1433.0390625
+        },
+        "memory_percent": {
+          "mean": 37.741819696561805,
+          "std": 1.0461947793378665,
+          "min": 22.401679116552923,
+          "max": 38.52054051444006,
+          "median": 37.68950932277482
+        },
+        "threads": {
+          "mean": 22.039264413518886,
+          "std": 0.4193968210477687,
+          "min": 21,
+          "max": 24,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1158.58984375,
+          "mean_rate": 0.04286191571357534
+        },
+        "io_write_mb": {
+          "total": 8.05078125,
+          "mean_rate": 0.003987832545997016
+        },
+        "total_samples": 2012
+      }
+    }
+
+##########################################################################
+SESSION 12
+##########################################################################
+📝 Command: 'plot the coloured buoy area while supplying a detailed geo-localised map with all buoy locations and coordinates'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+failure replanning
+------------------------------------------------------------
+🧠 Model raw response: map buoy area B
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area B
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+📝 Command: 'approach and attain the waypoint location received from the command'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'go to the received waypoint'
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+repeat mission with "do it again" clarification
+------------------------------------------------------------
+🧠 Model raw response: go to received goal
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: go to received goal
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'determine the colours of each buoy within the area and execute actions in the designated response mode'
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+WRONG! 
+
+============================================================
+🚀 Executing Mission 1/1: map buoy area A
+============================================================
+⚠️ Mission 'map buoy area A' was already completed!
+🔄 Prompting model with duplicate notification...
+⏳ Waiting for clarification for failed mission...
+⏳ Waiting for clarification for failed mission...
+⏳ Waiting for clarification for failed mission...
+📝 Received clarification: 'skip this'
+🔄 Handling duplicate mission clarification - will bypass duplicate check on next execution
+
+🎯 MISSION REQUEST #5
+📝 Command: 'determine the colours of each buoy within the area and execute actions in the designated response mode'
+----------------------------------------
+🧠 Step 1: Planning mission with LM...
+✅ Loaded 20 missions
+✅ Loaded 2 mission aliases: make move A, make move B
+------------------------------------------------------------
+🖊️ Model prompt:
+Available missions: skip, go to NW goal, go to NE goal, go to SW goal, go to SE goal, NW quadrant survey, NE quadrant survey, SW quadrant survey, SE quadrant survey, central survey, go to received goal, cross gate, map buoy area A, map buoy area B, make move red A, make move white A, make move black A, make move red B, make move white B, make move black B, stop mission
+    Memory: Buoys found so far: white, black, red, yellow, yellow | Previous missions: map buoy area B, go to received goal, map buoy area A
+    Command: determine the colours of each buoy within the area and execute actions in the designated response mode
+Previous response: map buoy area A
+Repeat mission: skip this
+Instruction: The previous mission was already completed. Generate a new mission plan based on the user's input. If the user confirms repeating, return the same mission. If they provide new input, generate appropriate missions.
+
+------------------------------------------------------------
+🧠 Model raw response: map buoy area A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: map buoy area A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 71.4%
+  🔶 Confidence = 67.1%
+------------------------------------------------------------
+WRONG!
+
+📝 Command: 'stop'
+------------------------------------------------------------
+🧠 Model raw response: stop mission
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: stop mission
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+
+📝 Command: 'recognise and process the buoy colours, then react appropriately in the specified operational mode'
+------------------------------------------------------------
+🧠 Model raw response: make move A
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: make move A
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 85.7%
+  🔶 Confidence = 78.6%
+------------------------------------------------------------
+
+
+📝 Command: 'cross through the gate passage situated between the yellow buoys'
+------------------------------------------------------------
+🧠 Model raw response: cross gate
+
+------------------------------------------------------------
+------------------------------------------------------------
+📊 Mission confidence evaluation:
+  Mission: cross gate
+  🔹 Self-Reflection certainty = 50.0%
+  🔹 Observed Consistency = 100.0%
+  🔶 Confidence = 90.0%
+------------------------------------------------------------
+FAILED! passed between a yellow buoy and the white one
+
+LATENCY MEAS:
+1763223310.3976445,WSL22->WSL18,/send_mission,1763223310.256061,1763223310.397453,141.39199256896973
+1763223469.7789068,WSL22->WSL18,/send_mission,1763223469.7305546,1763223469.7787561,48.201560974121094
+1763224331.381185,WSL22->WSL18,/send_mission,1763224331.2795568,1763224331.3808136,101.2568473815918
+1763224502.746616,WSL22->WSL18,/send_mission,1763224502.72144,1763224502.7465723,25.132179260253906
+1763224738.123064,WSL22->WSL18,/send_mission,1763224738.0840816,1763224738.1230042,38.92254829406738
+1763225139.301963,WSL22->WSL18,/send_mission,1763225139.274451,1763225139.3018336,27.382612228393555
+1763225155.8728583,WSL22->WSL18,/send_mission,1763225155.8436577,1763225155.872773,29.11520004272461
+1763225195.5498872,WSL22->WSL18,/send_mission,1763225195.53116,1763225195.5498135,18.653392791748047
+1763225343.4616358,WSL22->WSL18,/send_mission,1763225343.4347885,1763225343.461594,26.805639266967773
+1763225462.9675388,WSL22->WSL18,/send_mission,1763225462.9344788,1763225462.9674563,32.97758102416992
+1763225598.2396748,WSL22->WSL18,/send_mission,1763225598.2163868,1763225598.2395625,23.175716400146484
+
+RESOURCES MEAS:
+{
+      "start_time": "2025-11-15T17:14:53.308590",
+      "end_time": "2025-11-15T18:00:12.534293",
+      "start_timestamp": 1763223293.30859,
+      "end_timestamp": 1763226012.534293,
+      "duration_seconds": 2719.2257030010223,
+      "stats": {
+        "cpu": {
+          "mean": 2.8895648967551626,
+          "std": 13.552630592467164,
+          "min": 0.0,
+          "max": 103.4,
+          "median": 1.0
+        },
+        "memory_mb": {
+          "mean": 1484.1203447640119,
+          "std": 41.68828384009933,
+          "min": 854.53125,
+          "max": 1493.15625,
+          "median": 1486.40625
+        },
+        "memory_percent": {
+          "mean": 39.03297142787751,
+          "std": 1.0964192945169038,
+          "min": 22.474518913176812,
+          "max": 39.27061576853177,
+          "median": 39.0930880272538
+        },
+        "threads": {
+          "mean": 21.778392330383483,
+          "std": 0.42411359522195397,
+          "min": 20,
+          "max": 23,
+          "median": 22.0
+        },
+        "io_read_mb": {
+          "total": 1610.43359375,
+          "mean_rate": 0.03201943471043895
+        },
+        "io_write_mb": {
+          "total": 0.6953125,
+          "mean_rate": 0.00024639201401696793
+        },
+        "total_samples": 2712
+      }
+    }

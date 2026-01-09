@@ -1,0 +1,18 @@
+discovered_buoys:
+- color: yellow
+  depth: 0
+  discovery_time: 1764259945.483162
+  fiducial_id: 1
+  label: boa_yellow_1
+  latitude: 44.09599633
+  longitude: 9.86489875
+  name: yellow_gate_1
+- color: yellow
+  depth: 0
+  discovery_time: 1764260066.554084
+  fiducial_id: 2
+  label: boa_yellow_2
+  latitude: 44.09599633
+  longitude: 9.86492377
+  name: yellow_gate_2
+mission_start_time: 1764259625.183049

@@ -1,0 +1,9 @@
+{
+  "total_measurements": 3,
+  "average_latency_ms": 1674.538532892863,
+  "std_deviation_ms": 1804.8802823399785,
+  "min_latency_ms": 121.2007999420166,
+  "max_latency_ms": 3654.515027999878,
+  "wsl22_to_wsl18_avg": 1674.538532892863,
+  "wsl22_to_wsl18_std": 1804.8802823399785
+}
