@@ -58,13 +58,13 @@ Nevertheless the code I wrote personally for the purpose in the "mm_bt" director
   
   `python3 build_dataset.py`
 
-  # Training
+  ## Training
   Using the dataset building scripts in PoC or tlm2ros directories will provide a training and a testing dataset.
 
   "fine_tune_flant5base.ipynb" is a notebook that was used on Google Colab with T4 runtime to fine tune FLAN-T5-base using the training dataset.
   "test_flant5base.ipybn" is a notebook that tests the fine tuned model with the testing dataset and computes confidence statistics.
 
-  ## Usage
+  ### Usage
   To use the fine tune notebook make sure to upload the notebook and the training dataset in the same directory on Google Drive and adjust the path names at the     top of the notebook and run all cells, the notebook will fine tune the model and save it and provide training statistics.
 
   To use the test notebook make sure to have in the same directory the notebook, the model to test and the testing datasets. Adjust the path names and execute all   cells. The notebook will provide test statistics.
